@@ -7,7 +7,7 @@
     justify-content: top;
     align-items: center;
     gap: 5rem;
-	background: linear-gradient(180deg,rgb(155, 172, 179), rgb(155, 173, 252, 0.449),rgb(81, 120, 236, 0.549),rgba(16, 53, 164, 0.649));
+    background: linear-gradient(180deg,rgb(231, 235, 237), rgb(155, 173, 252, 0.349),rgb(81, 120, 236, 0.449),rgba(16, 53, 164, 0.649));
 }
 .contenedor{
 	width: 90%;
@@ -41,14 +41,22 @@ iframe{
 	font-weight: 400;
 	color: white;
 }
-.titulo_h3{
-	width: 90%;
+.contenedor_subtitulo{
+	width: 90%;	
 	border-top: 3px solid rgba(44, 44, 44, 0.511);
-	margin-top: 2rem;
-	padding-top: 2rem;
+	background-color: rgba(0, 0, 0, 0.389);
+	border-radius: 15px;
 	text-align: left;
+	padding: 2rem 2rem;
+}
+.titulo_h3{
 	font-size: 35px;
 	font-weight: 600;
+	color: white;
+}
+.contenedor_subtitulo>p{
+	font-size: px;
+	font-weight: 400;
 	color: white;
 }
 /*Textos del lado izquierdo*/

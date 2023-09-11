@@ -8,9 +8,10 @@ const Denunciar = ()=>{
     const [tarjeta, setTarjeta] = useState(false);
     const [tarjeta2, setTarjeta2] = useState(false);
     const [tarjeta3, setTarjeta3] = useState(false);
+    const [tarjeta4, setTarjeta4] = useState(false);
     const [datos, setDatos] = useState([]);
 
-    const coordBtn=[
+    const btn=[
         {
             nombre:"Fiscalía General",
             coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.1669015533016!2d-65.20105396854498!3d-26.818710500353045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c22e59daa19%3A0xe35fc73627a4f2c0!2sTribunales%20de%20la%20provincia!5e0!3m2!1ses-419!2sar!4v1694395311597!5m2!1ses-419!2sar",
@@ -61,8 +62,8 @@ const Denunciar = ()=>{
             nombre:"Fiscalía Federal Nº 2 de Tucumán",
             coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.1669015533016!2d-65.20105396854498!3d-26.818710500353045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c22e59daa19%3A0xe35fc73627a4f2c0!2sTribunales%20de%20la%20provincia!5e0!3m2!1ses-419!2sar!4v1694395311597!5m2!1ses-419!2sar",
             setCoordenada: setCoordenada,
-            tarjeta: tarjeta,
-            setTarjeta: setTarjeta,
+            tarjeta: tarjeta4,
+            setTarjeta: setTarjeta4,
             datos:[
                 {
                     h3:"Fiscalía Federal Nº 2 de Tucumán",
@@ -82,6 +83,7 @@ const Denunciar = ()=>{
             <p className='titulod_p'>
                 Tenés diferentes alternativas en todo el país. Comunícate con alguno de los siguientes organismos para solicitar asesoramiento de equipos especializados o presentar una denuncia.
             </p>
+            <p style={{marginTop:"1rem"}} className='titulod_p'>Recorda que tambien podes utilizar las <b style={{fontWeight:"700", fontSize:"20px"}}>Lineas: (102 y 137)</b> para denunciar ciberdelitos y grooming</p>
         </section>
 
 
@@ -89,7 +91,7 @@ const Denunciar = ()=>{
             <div className="contenedor_botones">
                 <div className='botones'>
                     {
-                        coordBtn.map((boton, key)=><BtnCoord 
+                        btn.map((boton, key)=><BtnCoord 
                                 clase={'boton'}
                                 titulo={boton.nombre}
                                 coord={boton.coord}
@@ -107,13 +109,17 @@ const Denunciar = ()=>{
 
                 <div className='tarjetas'>
                     {
-                        tarjeta || tarjeta2 || tarjeta3?datos.map((dat, key)=><section key={key} className='tarjeta'>
-                            <h3 key={key+5}>{dat.h3}</h3>
-                            <p key={key+1}>{dat.p1}</p>
-                            <p key={key+2}>{dat.p2}</p>
-                            <p key={key+3}>{dat.p3}</p>
-                            <p key={key+4}>{dat.p4}</p>
-                        </section>):<></>
+                        (tarjeta || tarjeta2 || tarjeta3 || tarjeta4)
+                        ?datos.map((dat, key)=>
+                            <section key={key} className='tarjeta'>
+                                <h3 key={key+5}>{dat.h3}</h3>
+                                <p key={key+1}>{dat.p1}</p>
+                                <p key={key+2}>{dat.p2}</p>
+                                <p key={key+3}>{dat.p3}</p>
+                                <p key={key+4}>{dat.p4}</p>
+                            </section>
+                        )
+                        :<></>
                     }
                 </div> 
             </div>

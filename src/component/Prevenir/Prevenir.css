@@ -1,0 +1,77 @@
+.grooming{
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,rgb(151, 220, 255),white 14%,white 85%,rgb(151, 220, 255));
+
+}
+.grooming_h2{
+    font-size: 35px;
+    margin: 2rem 0;
+}
+
+.grooming_p1,.grooming_p2{
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.p1,.p2{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    padding: 1rem 3rem;
+}
+
+.lista_l1{
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: left;
+    text-align: justify;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+.lista_l1>l1{
+    list-style: inside;
+    
+    text-align: left;
+}
+
+.grooming_video{
+    width: 60%;
+    height: 30rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.contenedor_btn{
+    width: 80%;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.btn{
+    width: 30%;
+    height: 5rem;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+    border: .5px solid rgba(0, 0, 0, 0.3);
+    
+}
+.btn>img{
+    width: 15%;
+}

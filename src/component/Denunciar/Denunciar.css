@@ -7,7 +7,7 @@
     justify-content: top;
     align-items: center;
     gap: 3rem;
-	background: linear-gradient(180deg,rgb(155, 172, 179), rgb(155, 173, 252, 0.449),rgb(81, 120, 236, 0.549),rgba(16, 53, 164, 0.649));
+    background: linear-gradient(180deg,rgb(231, 235, 237), rgb(155, 173, 252, 0.349),rgb(81, 120, 236, 0.449),rgba(16, 53, 164, 0.649));
 }
 
 .denuncia_titulo{

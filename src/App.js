@@ -4,20 +4,30 @@ import useIntersection from './useIntersection';
 import Header from './component/Header';
 import Tarjetas from './component/Tarjetas';
 import Denunciar from './component/Denunciar';
+import Prevenir from './component/Prevenir';
 
 function App() {
   const [btnMaleware, setBtnMaleware]= useState(false);
   const [btnDenunciar, setBtnDenunciar]= useState(false);
+  const [btnPrevenir, setBtnPrevenir]= useState(false);
 
   const controlMaleware=(event)=>{
     event.preventDefault();
     setBtnMaleware(!btnMaleware);
     setBtnDenunciar(false);
+    setBtnPrevenir(false);
   }
   const controlDenunciar=(event)=>{
     event.preventDefault();
     setBtnDenunciar(!btnDenunciar);
     setBtnMaleware(false);
+    setBtnPrevenir(false);
+  }
+  const controlPrevenir=(event)=>{
+    event.preventDefault();
+    setBtnPrevenir(!btnPrevenir);
+    setBtnMaleware(false);
+    setBtnDenunciar(false);
   }
 
   const thresholdValor=0;
@@ -54,7 +64,7 @@ function App() {
       intersector:intersectado,
       referencia: elementoRef,
       fondo:"#ff646488",
-      sombra:"0 0 15px 3px #a13f3fd5",
+      sombra:"2px 2px 10px 5px #a13f3fd5",
       color:"white"
     },
     {
@@ -67,7 +77,7 @@ function App() {
       intersector:intersectado2,
       referencia: elementoRef2,
       fondo:"#5ecdd1b4",
-      sombra:"0 0 15px 3px #57afb3",
+      sombra:"-2px 2px 10px 5px #57afb3",
       color:"white"
     },
     {
@@ -80,7 +90,7 @@ function App() {
       intersector:intersectado3,
       referencia: elementoRef3,
       fondo:"#58e464b4",
-      sombra:"0 0 15px 3px #32a53cce",
+      sombra:"2px 2px 10px 5px #32a53cce",
       color:"white"
     },
     {
@@ -92,8 +102,8 @@ function App() {
       animacion:"tarjeta_izquierda 2s ease-in",
       intersector:intersectado4,
       referencia: elementoRef4,
-      fondo:"#d4e3e4da",
-      sombra:"0 0 15px 3px #a4b9bbda",
+      fondo:"#ff00e4da",
+      sombra:"-2px 2px 10px 5px #ff00a0da",
       color:"white"
     },
     {
@@ -106,7 +116,7 @@ function App() {
       intersector:intersectado5,
       referencia: elementoRef5,
       fondo:"#453ea593",
-      sombra:"0 0 15px 3px #554974c5",
+      sombra:"2px 2px 10px 5px #554974c5",
       color:"white"
     },
     {
@@ -119,7 +129,7 @@ function App() {
       intersector:intersectado6,
       referencia: elementoRef6,
       fondo:"#a57c3eb7",
-      sombra:"0 0 15px 3px #6e532bb7",
+      sombra:"-2px 2px 10px 5px #6e532bb7",
       color:"white"
     },
     {
@@ -132,7 +142,7 @@ function App() {
       intersector:intersectado7,
       referencia: elementoRef7,
       fondo:"#b991c2b7",
-      sombra:"0 0 15px 3px #765b7ccb",
+      sombra:"2px 2px 10px 5px #765b7ccb",
       color:"white"
     },
   ]
@@ -155,8 +165,8 @@ function App() {
       click: controlDenunciar
     },
     {
-      titulo:"Como Prevenir" ,
-      click: controlMaleware
+      titulo:"Prevenir el Grooming" ,
+      click: controlPrevenir
     }
   ]
 
@@ -170,6 +180,11 @@ function App() {
       {
         btnDenunciar?<Denunciar/>:<></>
       }
+
+      {
+        btnPrevenir?<Prevenir/>:<></>
+      }
+
 
       
     </div>
