@@ -1,18 +1,21 @@
 .header{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.82);
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
 }
 .contenedor_texto{
-    width: 100%;
+    width: 80%;
+    background-color: rgba(3, 11, 39, 0.82);
+    box-shadow:inset 0 0 10px 5px rgb(43, 80, 226);
+    padding: 2rem;
+    border-radius: 20px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .header_titulo{
     font-size: 64px;
@@ -21,14 +24,14 @@
     color: rgb(255, 255, 255);
 }
 .header_texto{
-    padding: 0 9rem;
+    padding: 0 2rem;
     margin-top: 1rem;
     color: rgb(255, 255, 255);
     font-size: 26px;
     font-weight: 600;
-    word-spacing: 2.5px;
     font-family: 'Roboto', sans-serif;
     text-align: left;
+    word-spacing: 2px;
 }
 
 .menu{

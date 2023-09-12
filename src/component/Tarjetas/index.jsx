@@ -1,3 +1,4 @@
+import Redes from '../Redes';
 import './Tarjetas.css'
 
 const Tarjetas = (props)=>{
@@ -14,25 +15,28 @@ const Tarjetas = (props)=>{
                     Este tipo de programas maliciosos son utilizados por ciberdelincuentes para robar información personal, contraseñas, archivos del disco duro, números de tarjetas de crédito y más. En la actualidad, el malware constituye uno de los ataques cibernéticos más frecuentes y, por tanto, representa un gran riesgo para la ciberseguridad de los usuarios.
                 </p>
             </div>
+            <div className='contenedor_redesiframe'>
+                <iframe 
+                    width="540" 
+                    height="300" 
+                    src="https://www.youtube.com/embed/HuasitV4lcw?si=zSltfG3YkPRTR5gS" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="
+                        accelerometer;
+                        autoplay; 
+                        clipboard-write; 
+                        encrypted-media; 
+                        gyroscope; 
+                        picture-in-picture; 
+                        web-share
+                    " 
+                    allowfullscreen
+                >
+                </iframe>
+                <Redes/>
+            </div>
             
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/HuasitV4lcw?si=zSltfG3YkPRTR5gS" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="
-                    accelerometer;
-                    autoplay; 
-                    clipboard-write; 
-                    encrypted-media; 
-                    gyroscope; 
-                    picture-in-picture; 
-                    web-share
-                " 
-                allowfullscreen
-            >
-            </iframe>
         </section>
         <div className='contenedor_subtitulo'>
             <h3 className='titulo_h3'>Tipos de Maleware </h3>

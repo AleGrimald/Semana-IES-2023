@@ -2,9 +2,13 @@ import Redes from '../Redes';
 import './Prevenir.css'
 
 const Prevenir=(props)=>{
+
     return <section className='grooming'>
-        <Redes/>
-        <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
+        <div>
+            <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
+            <Redes/>
+        </div>
+        
         <div className='grooming_p1'>
             <p className='p1'>
                 Los dispositivos, las plataformas y entornos digitales se convirtieron en espacios esenciales en la socialización de niñas, niñes, niños y adolescentes. Son espacios para el ejercicio de sus derechos, como jugar, comunicarse, educarse, informarse y participar, entre otros. Pero allí también pueden encontrarse con algunos riesgos y situaciones que afecten su integridad.
