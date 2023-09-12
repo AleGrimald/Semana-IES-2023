@@ -8,7 +8,7 @@ const Tarjetas = (props)=>{
 
     return <section className='contenedor_tarjeta'>
         <section className='contenedor'>
-            <div class="contenedor_titulo">
+            <div className="contenedor_titulo">
                 <h2 className="titulo_h2">¿Qué es un Malware?</h2>
                 <p className="titulo_p">
                     El término malware, software malicioso o virus informático hace referencia a un programa diseñado para infiltrarse en el sistema operativo de un dispositivo (tales como smartphones android y apple, computadoras, tablets) y alterar su funcionamiento. 
@@ -21,7 +21,7 @@ const Tarjetas = (props)=>{
                     height="300" 
                     src="https://www.youtube.com/embed/HuasitV4lcw?si=zSltfG3YkPRTR5gS" 
                     title="YouTube video player" 
-                    frameborder="0" 
+                     
                     allow="
                         accelerometer;
                         autoplay; 
@@ -31,7 +31,7 @@ const Tarjetas = (props)=>{
                         picture-in-picture; 
                         web-share
                     " 
-                    allowfullscreen
+                    allowFullScreen
                 >
                 </iframe>
                 <Redes/>

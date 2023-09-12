@@ -153,7 +153,7 @@ function App() {
   }
   const btn=[
     {
-      titulo:"Tipos de Maleware" ,
+      titulo:"Maleware" ,
       click: controlMaleware
     },
     {
@@ -165,7 +165,7 @@ function App() {
       click: controlDenunciar
     },
     {
-      titulo:"Prevenir el Grooming" ,
+      titulo:"Grooming" ,
       click: controlPrevenir
     }
   ]

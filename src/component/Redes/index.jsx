@@ -1,6 +1,7 @@
 import './Redes.css'
 
 const Redes = (props) =>{
+    
     return <section className='redes'>
         <h3 className='redes_h3'>
             Compartir en<br/> redes sociales

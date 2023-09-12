@@ -14,7 +14,14 @@ const Header = (props)=>{
         
         <ul className="menu">
             {
-                btn.map((boton, key)=><Botones key={key} click={boton.click} titulo={boton.titulo}/>)
+                btn.map((boton, key)=>
+                    <Botones 
+                        key={key} 
+                        click={boton.click} 
+                        titulo={boton.titulo}
+                        clase={"menu_items"}
+                    />
+                )
             }
         </ul>
     </header>

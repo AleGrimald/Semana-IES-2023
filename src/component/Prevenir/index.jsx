@@ -1,8 +1,23 @@
 import Redes from '../Redes';
+import Botones from '../Botones'
+import Legislacion from '../Legislacion';
+import Proyectos from '../Proyectos'
 import './Prevenir.css'
+import { useState } from 'react';
 
 const Prevenir=(props)=>{
-
+    const[legislacio, setLegislacion]=useState(false);
+    const[proyecto, setProyecto]=useState(false);
+    const ejecutarLegislacion=(event)=>{
+        event.preventDefault();
+        setLegislacion(!legislacio);
+        setProyecto(false);
+    }
+    const ejecutarProyecto=(event)=>{
+        event.preventDefault();
+        setProyecto(!proyecto);
+        setLegislacion(false);
+    }
     return <section className='grooming'>
         <div>
             <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
@@ -40,9 +55,8 @@ const Prevenir=(props)=>{
             height="315" 
             src="https://www.youtube.com/embed/O1bbS25JngQ?si=AQsUIGPHgScO9eVS" 
             title="YouTube video player" 
-            frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
+            allowFullScreen
         ></iframe>
 
         <div className='grooming_p2'>
@@ -55,15 +69,25 @@ const Prevenir=(props)=>{
         </div>
 
         <div className='contenedor_btn'>
-            <button className='btn'>
-                <img src="./conexion.svg" alt=""/>
-                Proyectos
-            </button>
-            <button className='btn'>
-                <img src="./justicia.svg" alt=""/>
-                Legislacion
-            </button>
+            <Botones
+                clase='btn'
+                img={"./conexion.svg"} 
+                titulo={"Proyectos"}
+                click={ejecutarProyecto}
+            />
+            <Botones
+                clase='btn'
+                img={"./justicia.svg"} 
+                titulo={"Legislacion"}
+                click={ejecutarLegislacion}
+            />
         </div>
+        {
+            legislacio?<Legislacion/>:<></>
+        }
+        {
+            proyecto?<Proyectos/>:<></>
+        }
     </section>
 }
 

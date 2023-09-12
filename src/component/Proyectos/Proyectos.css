@@ -1,0 +1,39 @@
+.proyecto{
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: justify;
+}
+.proyecto_contenedor_titulo,.proyecto_contenedor_texto
+{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.proyecto_h2{
+    width: 100%;
+    margin: 2rem 0 .6rem 0;
+    font-size: 35px;
+}
+.proyecto_p{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    padding: 1rem 0rem;
+}
+
+.proyecto_contenedor_lista{
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: left;
+    text-align: justify;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
