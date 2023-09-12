@@ -31,6 +31,7 @@
 
 .denuncia_btntarjeta{
     width: 90%;
+    height: 30rem;
     display: flex;
     justify-content: space-around;
     align-items: top;
@@ -74,7 +75,7 @@
     
 }
 .tarjeta{
-    width: 100%;
+    width: 90%;
     padding: 1rem 1.5rem;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.3);
@@ -91,4 +92,8 @@
 	font-size: 16px;
 	font-weight: 600;
 	color:white;
+}
+.contenedor_mapa{
+    width: 40%;
+    height: 90%;
 }

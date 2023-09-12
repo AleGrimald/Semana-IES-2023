@@ -124,8 +124,10 @@ const Denunciar = ()=>{
                 </div> 
             </div>
             
-
-            <Map coord={coordenada}/>
+            <div className='contenedor_mapa'> 
+                <Map coord={coordenada}/>
+            </div>
+           
         </section>
 
        
