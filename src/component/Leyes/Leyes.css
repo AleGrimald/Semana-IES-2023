@@ -31,3 +31,23 @@
     font-weight: 600;
     text-decoration: none;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+    .leyes{
+        margin-bottom: 1rem;
+    }
+    .leyes_contenedor_titulo{
+        width: 75%;
+    }
+    
+    .leyes_contenedor_a{
+        width: 75%;
+        gap: .6rem;
+    }
+    
+    .leyes_a1,.leyes_a2{
+        padding: .4rem .8rem;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}

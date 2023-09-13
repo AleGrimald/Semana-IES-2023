@@ -27,3 +27,28 @@
     text-align: justify;
     padding: 1rem 0rem;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+    .legislacion{
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+    }
+    .legislacion_contenedor_titulo,.legislacion_contenedor_texto
+    {
+        width: 75%;
+        justify-content: top;
+        align-items: center;
+    }
+    .legislacion_h2{
+        margin: .5rem 0 .5rem 0rem;
+        font-size: 24px;
+    }
+    .legislacion_p{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        padding: 0 ;
+    }
+    
+}

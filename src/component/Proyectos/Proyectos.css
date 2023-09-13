@@ -37,3 +37,40 @@
     gap: 1rem;
     margin: 1rem 0 2rem 0;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+    .proyecto{
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+    }
+    .proyecto_contenedor_titulo,.proyecto_contenedor_texto
+    {
+        width: 75%;
+        justify-content: top;
+        align-items: center;
+    }
+    .proyecto_h2{
+        margin: .5rem 0 .5rem 2rem;
+        font-size: 24px;
+    }
+    .proyecto_p{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        padding: 0 1rem;
+    }
+    .proyecto_contenedor_lista{
+        width: 70%;
+        align-items: center;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 500;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
+}
