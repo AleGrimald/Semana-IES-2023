@@ -72,7 +72,7 @@ iframe{
 	font-weight: 400;
 	color: white;
 }
-/*Textos del lado izquierdo*/
+/*Contenedor de las Tarjetas*/
 .tarjeta_spy,.tarjeta_tro,.tarjeta_bot,.tarjeta_ran,.tarjeta_gus,.tarjeta_adw,.tarjeta_roo{
     width: 100%;
     padding: 1rem 0;
@@ -81,6 +81,12 @@ iframe{
     align-items: center;
     margin-bottom: 2rem;
 }
+.tarjeta_ran,.tarjeta_gus,.tarjeta_adw,.tarjeta_roo{
+    flex-direction: row-reverse;
+}
+
+/*Tarjetas de color*/
+/*Izquierda*/
 .spy,.tro,.bot{
     width: 50%;
 	height: 16rem;
@@ -95,10 +101,7 @@ iframe{
     padding: 0rem 2rem 2rem 2rem;
 }
 
-/*Textos del lado derecho*/
-.tarjeta_ran,.tarjeta_gus,.tarjeta_adw,.tarjeta_roo{
-    flex-direction: row-reverse;
-}
+/*Derecha*/
 .ran,.gus,.adw,.roo{
     width: 50%;
 	height: 16rem;
@@ -112,6 +115,7 @@ iframe{
     padding: 0rem 2rem 2rem 2rem;
 }
 
+/*Contenido de las tarjetas + Imagen*/
 .imagen{
     width: 30%;
     height: 16rem;
@@ -228,4 +232,101 @@ iframe{
 		opacity: 1;
 		transform: translateX(0px);
 	}
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+    /*Contenedor Principal*/
+	.contenedor_tarjeta{
+		padding-top: 1.5rem;
+		gap: 3rem;
+	}
+	
+	/*Contenedor del H1 y Video*/
+	.contenedor{
+		width: 100%;
+		display: flex;
+		justify-content: top;
+		flex-flow: column nowrap;
+	}
+	.contenedor_titulo{
+		width: 90%;
+		padding: 1rem;
+		margin-bottom: 2rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;		
+	}
+	.titulo_h2{
+		margin-bottom: 1rem;
+		font-size: 24px;
+		font-weight: 600;	
+	}
+	.titulo_p{
+		text-align: left;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.contenedor_redesiframe{
+		width: 90%;
+		padding: .5rem 0;
+	}
+	iframe{
+		width: 95%;
+		margin-bottom: 2rem;
+	}
+
+	/*Contenedor del H3 tipos de malewawre*/
+	.contenedor_subtitulo{
+		height: 8rem;	
+		padding: 1rem 0 0 1rem;
+	}
+	.titulo_h3{
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.contenedor_subtitulo>p{
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	/*Contenedor de las Tarjetas*/
+	.tarjeta_spy,.tarjeta_tro,.tarjeta_bot,.tarjeta_ran,.tarjeta_gus,.tarjeta_adw,.tarjeta_roo{
+		width: 100%;
+		padding: 1rem 0;
+		gap: 1rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	}
+
+	/*Tarjetas de color*/
+	/*Izquierda*/
+	/*Derecha*/
+	.ran,.gus,.adw,.roo,.spy,.tro,.bot{
+		width: 90%;
+		height: auto;
+		align-items: left;
+		text-align: left;
+		border-radius: 20px;
+		padding:.5rem 1rem;
+	}
+
+	/*Contenido de las tarjetas + Imagen*/
+	.imagen{
+		width: 90%;
+		height: 12rem;
+	}
+	
+	.tarjeta_titulo{
+		font-size: 1.5rem;
+	}
+	.tarjeta_texto{
+		margin-top: .4rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
 }

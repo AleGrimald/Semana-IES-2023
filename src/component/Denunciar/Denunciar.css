@@ -97,3 +97,10 @@
     width: 40%;
     height: 90%;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    
+}

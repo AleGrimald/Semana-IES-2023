@@ -42,3 +42,40 @@
     gap: 2rem;
     padding: 0 1rem;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+    .contenedor_texto{
+        width: 90%;
+        padding: 1rem;
+        border-radius: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .header_titulo{
+        width: 100%;
+        font-size: 24px;
+    }
+    .header_texto{
+        padding: 0;
+        font-size: 18px;
+        font-weight: 600;
+        word-spacing: 1px;
+        text-align: left;
+    }
+
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-flow: column wrap;
+        gap: 2rem;
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
