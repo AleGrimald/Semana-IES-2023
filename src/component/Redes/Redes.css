@@ -40,7 +40,13 @@
 }
 
 @media (min-width: 375px) and (max-width: 767px){
-    
+    .redes_footer{
+        width:100%;
+        height:auto;
+        justify-content: left;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){

@@ -59,3 +59,61 @@
     box-shadow: 0 0 5px 2px rgb(169, 169, 213);
     border-radius: 20px;
 }
+
+@media (min-width: 375px) and (max-width: 767px){
+    /*Contenedor principal*/
+    .footer{
+        height: auto;
+        justify-content: top;
+        align-items: center;
+        flex-flow: column nowrap;
+        padding: 1rem 0;
+    }
+
+    /*Contenedor del logo y h2*/
+    .footer_logo{
+        width: 90%;
+        height: 8rem;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items:  center;
+        gap:1rem;
+        
+    }
+    .footer_logo>h2{
+        width: 65%;
+        font-size: 1.6rem;
+        padding: 0 .5rem 0 0;  
+    }
+    .footer_logo>img{
+        width: 35%;
+        height: 80%;
+        border-radius: 50%;
+    }
+
+    /*Contenedor de la lista de info y datos mios*/
+    .footer_lista{
+        width: 90%;
+        padding: 1rem .5rem;
+    }
+    
+    .dev{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: top;
+        gap: 1rem;
+        padding: .5rem 0;
+    }
+    .dev_img{
+        padding: 0;
+    }
+    .dev_img>a>img{
+        width:2rem;
+        padding: .1rem;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    
+}

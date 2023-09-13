@@ -22,6 +22,7 @@ const Footer =(props)=>{
             </div>
             
         </ul>
+        
         <Redes clase='redes_footer'/>
         
     </footer>
