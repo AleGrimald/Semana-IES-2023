@@ -5,7 +5,7 @@ const Proyectos=()=>{
     return <section className='proyecto'>
         <div className='proyecto_contenedor_titulo'>
             <h2 className='proyecto_h2'>Proyectos</h2>
-            <Redes/>
+            <Redes clase='redes'/>
         </div>
 
         <div className='proyecto_contenedor_texto'>

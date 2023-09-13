@@ -21,7 +21,7 @@ const Prevenir=(props)=>{
     return <section className='grooming'>
         <div>
             <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
-            <Redes/>
+            <Redes clase='redes'/>
         </div>
         
         <div className='grooming_p1'>

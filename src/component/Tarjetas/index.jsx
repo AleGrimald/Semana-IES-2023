@@ -34,7 +34,7 @@ const Tarjetas = (props)=>{
                     allowFullScreen
                 >
                 </iframe>
-                <Redes/>
+                <Redes clase='redes'/>
             </div>
             
         </section>

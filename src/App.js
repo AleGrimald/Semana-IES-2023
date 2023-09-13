@@ -5,6 +5,7 @@ import Header from './component/Header';
 import Tarjetas from './component/Tarjetas';
 import Denunciar from './component/Denunciar';
 import Prevenir from './component/Prevenir';
+import Footer from './component/Footer';
 
 function App() {
   const [btnMaleware, setBtnMaleware]= useState(false);
@@ -184,8 +185,10 @@ function App() {
       {
         btnPrevenir?<Prevenir/>:<></>
       }
-
-
+      
+      {
+        btnDenunciar||btnMaleware||btnPrevenir?<Footer/>:<></>
+      }
       
     </div>
   );

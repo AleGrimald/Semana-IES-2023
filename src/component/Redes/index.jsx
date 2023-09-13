@@ -1,8 +1,8 @@
 import './Redes.css'
 
 const Redes = (props) =>{
-    
-    return <section className='redes'>
+    const {clase}=props;
+    return <section  className={clase}>
         <h3 className='redes_h3'>
             Compartir en<br/> redes sociales
         </h3>
