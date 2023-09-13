@@ -86,7 +86,6 @@ const Denunciar = ()=>{
             <p style={{marginTop:"1rem"}} className='titulod_p'>Recorda que tambien podes utilizar las <b style={{fontWeight:"700", fontSize:"20px"}}>Lineas: (102 y 137)</b> para denunciar ciberdelitos y grooming</p>
         </section>
 
-
         <section className='denuncia_btntarjeta'>
             <div className="contenedor_botones">
                 <div className='botones'>
@@ -129,8 +128,6 @@ const Denunciar = ()=>{
             </div>
            
         </section>
-
-       
     </section>
 }
 

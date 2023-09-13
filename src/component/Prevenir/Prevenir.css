@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(90deg,rgb(151, 220, 255),white 14%,white 85%,rgb(151, 220, 255));
-
 }
 .grooming_h2{
     font-size: 35px;
@@ -18,8 +17,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 .p1,.p2{
     font-size: 18px;
@@ -74,4 +72,64 @@
 }
 .btn>img{
     width: 15%;
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+    .grooming_titulo{
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: top;
+        align-items: left;
+        gap: 1rem;
+    }
+    .grooming_h2{
+        font-size: 22px;
+        margin: 2rem 0 0rem 0;
+    }
+    .grooming_p1,.grooming_p2{
+        width: 80%;
+        padding: 1rem;
+    }
+    .p1,.p2{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        padding: 1rem 0;
+    }
+
+    .lista_l1{
+        width: 90%;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 500;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .grooming_video{
+        width: 70%;
+        height: 10rem;
+        margin: 1rem 0;
+    }
+    
+    .contenedor_btn{
+        width: 100%;
+        margin: 1rem 0;
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+    .btn{
+        width: 65%;
+        height: 4rem;
+        font-size: 20px;
+        font-weight: 600;        
+    }
+    .btn>img{
+        width: 18%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
 }

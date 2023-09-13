@@ -19,9 +19,9 @@ const Prevenir=(props)=>{
         setLegislacion(false);
     }
     return <section className='grooming'>
-        <div>
+        <div className='grooming_titulo'>
             <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
-            <Redes clase='redes'/>
+            <Redes clase='redes grooming_redes'/>
         </div>
         
         <div className='grooming_p1'>
@@ -49,6 +49,7 @@ const Prevenir=(props)=>{
                 </li>
             </ul>
         </div>
+
         <iframe
             className='grooming_video'
             width="560" 
@@ -82,6 +83,7 @@ const Prevenir=(props)=>{
                 click={ejecutarLegislacion}
             />
         </div>
+
         {
             legislacio?<Legislacion/>:<></>
         }

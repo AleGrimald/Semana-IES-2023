@@ -15,8 +15,8 @@ const Footer =(props)=>{
             <div className='dev'>
                 <h4>Dev: Grimaldi Oscar Alejandro</h4>
                 <div className='dev_img'>
-                    <a href="https://github.com/AleGrimald"><img src='./linkedin.svg' alt=""/></a>
-                    <a href="https://www.linkedin.com/in/alejandro-grimaldi-828868262/"><img src="./githubBlack.svg" alt=""/></a>
+                    <a href="https://github.com/AleGrimald"><img src="./githubBlack.svg" alt=""/></a>
+                    <a href="https://www.linkedin.com/in/alejandro-grimaldi-828868262/"><img src='./linkedin.svg' alt=""/></a>
                 </div>
                 
             </div>

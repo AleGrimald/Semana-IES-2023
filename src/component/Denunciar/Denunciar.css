@@ -99,6 +99,77 @@
 }
 
 @media (min-width: 375px) and (max-width: 767px){
+    /*Contenedor Principal*/
+    .contenedor_denuncia{
+        width: 100%;
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    /*Contenedor del Titulo + h2 + p*/
+    .denuncia_titulo{
+        width: 90%;
+        padding: .6rem;
+    }
+    .titulod_h2{
+        margin-bottom: 1rem;
+        font-size:22px;
+    }
+    .titulod_p{
+        text-align: left;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    /*Contenedor botones y tarjetas*/
+    .denuncia_btntarjeta{
+        height: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: top;
+        align-items: center;
+        gap:1rem;
+    }
+    .contenedor_botones{
+        width: 100%;
+        padding:0;
+        gap: 1.5rem;
+    }
+    .botones{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+    .boton{
+        width: 100%;
+        height: 2rem;
+        font-size: 14px;
+        text-align: left;
+        padding: 0 0 0 1rem;
+    }
+    .tarjetas{
+        justify-content: center;
+    }
+    .tarjeta{
+        width: 100%;
+        padding: 1rem .5rem;
+        text-align: left;
+    }
+    .tarjeta>h3{
+        margin-bottom: 1rem;
+        font-size: 18px;
+    }
+    .tarjeta>p{
+        text-align: left;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .contenedor_mapa{
+        width: 99%;
+        height: 15rem;
+    }
 
 }
 @media (min-width: 768px) and (max-width: 1024px){
