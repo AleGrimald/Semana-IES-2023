@@ -11,7 +11,7 @@ const Redes = (props) =>{
                 <img src="./facebook.svg" alt=""/>
             </a>
 
-            <a href="https://web.whatsapp.com/send?text=https%3A%2F%2Fsemana-ies-tv.netlify.app">
+            <a href="https://api.whatsapp.com/send?text=Aprende sobre delitos infolrmaticos en semana-ies-tv.netlify.app">
                 <img src="./whatsapp.svg" alt=""/>
             </a>
         </div>
