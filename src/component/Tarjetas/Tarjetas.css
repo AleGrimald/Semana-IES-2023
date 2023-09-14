@@ -1,7 +1,7 @@
 .contenedor_tarjeta{
     width: 100%;
     box-sizing: border-box;
-    padding-top: 3rem;
+    padding-top: 10rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: top;
@@ -237,7 +237,7 @@ iframe{
 @media (min-width: 360px) and (max-width: 767px){
     /*Contenedor Principal*/
 	.contenedor_tarjeta{
-		padding-top: 1.5rem;
+		padding: 5rem 0;
 		gap: 3rem;
 	}
 	

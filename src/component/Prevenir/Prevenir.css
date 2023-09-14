@@ -1,6 +1,6 @@
 .grooming{
     width: 100%;
-    padding: 2rem 0;
+    padding-top: 10rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -75,6 +75,9 @@
 }
 
 @media (min-width: 360px) and (max-width: 767px){
+    .grooming{
+        padding-top: 5rem;
+    }
     .grooming_titulo{
         width: 90%;
         display: flex;
@@ -85,7 +88,7 @@
     }
     .grooming_h2{
         font-size: 22px;
-        margin: 2rem 0 0rem 0;
+        margin: 0;
     }
     .grooming_p1,.grooming_p2{
         width: 80%;

@@ -7,6 +7,7 @@ const Botones =(props)=>{
         <img src={img} alt=""/>
         {titulo}
     </button>
+
 }
 
 export default Botones;

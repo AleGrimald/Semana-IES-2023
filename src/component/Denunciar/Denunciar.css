@@ -1,7 +1,7 @@
 .contenedor_denuncia{
     width: 100%;
     box-sizing: border-box;
-    padding: 3rem 0;
+    padding-top: 10rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: top;
@@ -102,7 +102,7 @@
     /*Contenedor Principal*/
     .contenedor_denuncia{
         width: 100%;
-        padding: 2rem 0;
+        padding: 6rem 0 2rem 0;
         gap: 2rem;
     }
     /*Contenedor del Titulo + h2 + p*/
@@ -150,6 +150,7 @@
     }
     .tarjetas{
         justify-content: center;
+        height: 15rem;
     }
     .tarjeta{
         width: 100%;

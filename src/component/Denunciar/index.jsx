@@ -77,7 +77,7 @@ const Denunciar = ()=>{
     ]
     
 
-    return <section className='contenedor_denuncia'>
+    return <section className='contenedor_denuncia' id='denunciar'>
         <section className='denuncia_titulo'>
             <h2 className='titulod_h2'>Si fuiste víctima de un ciberdelito, denuncialo</h2>
             <p className='titulod_p'>

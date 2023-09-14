@@ -18,7 +18,7 @@ const Prevenir=(props)=>{
         setProyecto(!proyecto);
         setLegislacion(false);
     }
-    return <section className='grooming'>
+    return <section className='grooming' id='grooming'>
         <div className='grooming_titulo'>
             <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
             <Redes clase='redes grooming_redes'/>

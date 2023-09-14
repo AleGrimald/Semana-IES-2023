@@ -6,10 +6,10 @@ const Tarjetas = (props)=>{
     
     
 
-    return <section className='contenedor_tarjeta'>
+    return <section className='contenedor_tarjeta' id='malware'>
         <section className='contenedor'>
             <div className="contenedor_titulo">
-                <h2 className="titulo_h2">¿Qué es un Malware?</h2>
+                <h2 id='titulo_h2' className="titulo_h2">¿Qué es un Malware?</h2>
                 <p className="titulo_p">
                     El término malware, software malicioso o virus informático hace referencia a un programa diseñado para infiltrarse en el sistema operativo de un dispositivo (tales como smartphones android y apple, computadoras, tablets) y alterar su funcionamiento. 
                     Este tipo de programas maliciosos son utilizados por ciberdelincuentes para robar información personal, contraseñas, archivos del disco duro, números de tarjetas de crédito y más. En la actualidad, el malware constituye uno de los ataques cibernéticos más frecuentes y, por tanto, representa un gran riesgo para la ciberseguridad de los usuarios.

@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import useIntersection from './useIntersection';
 import Header from './component/Header';
+import Nav from './component/Nav';
 import Tarjetas from './component/Tarjetas';
 import Denunciar from './component/Denunciar';
 import Prevenir from './component/Prevenir';
@@ -17,18 +18,22 @@ function App() {
     setBtnMaleware(!btnMaleware);
     setBtnDenunciar(false);
     setBtnPrevenir(false);
+    window.scrollTo({top:0, behavior: "smooth"})
   }
   const controlDenunciar=(event)=>{
     event.preventDefault();
     setBtnDenunciar(!btnDenunciar);
     setBtnMaleware(false);
     setBtnPrevenir(false);
+    window.scrollTo({top:0, behavior: "smooth"})
+
   }
   const controlPrevenir=(event)=>{
     event.preventDefault();
     setBtnPrevenir(!btnPrevenir);
     setBtnMaleware(false);
     setBtnDenunciar(false);
+    window.scrollTo({top:0, behavior: "smooth"})
   }
 
   const thresholdValor=0;
@@ -154,34 +159,42 @@ function App() {
   }
   const btn=[
     {
-      titulo:"Maleware" ,
-      click: controlMaleware
+      titulo:"Malware" ,
+      click: controlMaleware,
     },
     {
-      titulo:"Casos Registrados" ,
-      click: controlMaleware
+      titulo:"Noticias" ,
+      click: controlMaleware,
     },
     {
-      titulo:"Donde Denunciar" ,
-      click: controlDenunciar
+      titulo:"Denunciar" ,
+      click: controlDenunciar,
+      ruta:"/denunciar",
     },
     {
-      titulo:"Grooming" ,
-      click: controlPrevenir
+      titulo:"Prevenir" ,
+      click: controlPrevenir,
     }
   ]
 
+
   return (
     <div className="App">
-      <Header contenido={headerContenido} btn={btn}/>
 
+      {
+        (btnMaleware||btnDenunciar||btnPrevenir)===false
+        ?<Header contenido={headerContenido} btn={btn}/>
+        :<Nav btn={btn}/>
+      }
+
+      
+      
       {
         btnMaleware?<Tarjetas tarjetas={tarjetas}/>:<></>
       }
       {
         btnDenunciar?<Denunciar/>:<></>
       }
-
       {
         btnPrevenir?<Prevenir/>:<></>
       }
