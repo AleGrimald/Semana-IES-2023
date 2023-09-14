@@ -98,7 +98,7 @@
     height: 90%;
 }
 
-@media (min-width: 375px) and (max-width: 767px){
+@media (min-width: 360px) and (max-width: 767px){
     /*Contenedor Principal*/
     .contenedor_denuncia{
         width: 100%;

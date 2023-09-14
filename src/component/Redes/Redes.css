@@ -39,7 +39,7 @@
 
 }
 
-@media (min-width: 375px) and (max-width: 767px){
+@media (min-width: 360px) and (max-width: 767px){
     .redes_footer{
         width:100%;
         height:auto;

@@ -74,7 +74,7 @@
     width: 15%;
 }
 
-@media (min-width: 375px) and (max-width: 767px){
+@media (min-width: 360px) and (max-width: 767px){
     .grooming_titulo{
         width: 90%;
         display: flex;
