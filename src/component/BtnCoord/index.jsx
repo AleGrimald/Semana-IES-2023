@@ -7,6 +7,9 @@ const BtnCoord = (props)=>{
         setCoordenada(coord);
         setTarjeta(!tarjeta);
         setDato(datos);
+        console.log("Coordenadas:",coord);
+        console.log("Tarjeta:",tarjeta);
+        console.log("Datos:",datos);
     }
 
     return <button key={key} className={clase} onClick={generarCoord}>

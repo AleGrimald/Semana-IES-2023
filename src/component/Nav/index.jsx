@@ -7,11 +7,10 @@ const Nav=(props)=>{
     return <nav className="menu2">
         {
             btn.map((boton, key)=><Botones 
-                    ruta={boton.ruta} 
                     key={key} 
                     click={boton.click} 
                     titulo={boton.titulo}
-                    clase={"menu_items"}
+                    clase={boton.clase}
                 />
             )
         }

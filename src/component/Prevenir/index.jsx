@@ -6,6 +6,7 @@ import './Prevenir.css'
 import { useState } from 'react';
 
 const Prevenir=(props)=>{
+    const {datTarjeta}=props.titulosDatos;
     const[legislacio, setLegislacion]=useState(false);
     const[proyecto, setProyecto]=useState(false);
     const ejecutarLegislacion=(event)=>{
@@ -21,7 +22,18 @@ const Prevenir=(props)=>{
     return <section className='grooming' id='grooming'>
         <div className='grooming_titulo'>
             <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
-            <Redes clase='redes grooming_redes'/>
+            {
+                datTarjeta.map(dato=>
+                    <Redes
+                     clase='redes grooming_redes'
+                     elementWpFb={dato.elementWpFb} 
+                     intersectadoWpFb={dato.intersectadoWpFb}
+                     animacion={dato.animacion}
+                     animacion2={dato.animacion2} 
+                    />
+                )
+            }
+            
         </div>
         
         <div className='grooming_p1'>

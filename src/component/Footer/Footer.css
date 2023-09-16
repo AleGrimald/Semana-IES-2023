@@ -60,6 +60,42 @@
     border-radius: 20px;
 }
 
+@keyframes facebook {
+    0% {
+      box-shadow: 0 0 0 0 rgba(20, 188, 255, 0.7);
+      background-color: white;
+      transform: scale(1);
+    }
+    70%{
+        box-shadow: 0 0 2px 5px rgba(17, 51, 223, .7);
+        background:linear-gradient(120deg,rgb(21, 76, 214),rgb(132, 179, 255)) ;
+        transform: scale(1.15);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(20, 188, 255, 0.7);
+        background-color: white;
+        transform: scale(1);
+    }
+}
+
+@keyframes whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(20, 255, 24, 0.7);
+        background-color: white;
+        transform: scale(1);
+      }
+      70%{
+          box-shadow: 0 0 2px 5px rgba(17, 223, 17, 0.7);
+          background:linear-gradient(120deg,rgb(21, 214, 21),rgb(132, 255, 138)) ;
+          transform: scale(1.15);
+      }
+      100% {
+          box-shadow: 0 0 0 0 rgba(20, 255, 32, 0.7);
+          background-color: white;
+          transform: scale(1);
+      }
+}
+
 @media (min-width: 360px) and (max-width: 767px){
     /*Contenedor principal*/
     .footer{

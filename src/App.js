@@ -1,6 +1,8 @@
 import './App.css';
+//Hooks
 import { useState } from 'react';
 import useIntersection from './useIntersection';
+//Componentes
 import Header from './component/Header';
 import Nav from './component/Nav';
 import Tarjetas from './component/Tarjetas';
@@ -12,7 +14,15 @@ function App() {
   const [btnMaleware, setBtnMaleware]= useState(false);
   const [btnDenunciar, setBtnDenunciar]= useState(false);
   const [btnPrevenir, setBtnPrevenir]= useState(false);
-
+  const [datos, setDatos] = useState([]);
+  const [coordenada, setCoordenada]= useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2871895368685!2d-65.20518169636479!3d-26.830816455657708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c106f2afc99%3A0xe97bef14f2ad881a!2sPlaza%20Independencia!5e0!3m2!1ses-419!2sar!4v1694418283826!5m2!1ses-419!2sar");
+  const [tarjeta, setTarjeta] = useState(false);
+  const [tarjeta2, setTarjeta2] = useState(false);
+  const [tarjeta3, setTarjeta3] = useState(false);
+  const [tarjeta4, setTarjeta4] = useState(false);
+  
+  
+//Funciones de los botones del Header y Nav
   const controlMaleware=(event)=>{
     event.preventDefault();
     setBtnMaleware(!btnMaleware);
@@ -26,7 +36,6 @@ function App() {
     setBtnMaleware(false);
     setBtnPrevenir(false);
     window.scrollTo({top:0, behavior: "smooth"})
-
   }
   const controlPrevenir=(event)=>{
     event.preventDefault();
@@ -36,6 +45,7 @@ function App() {
     window.scrollTo({top:0, behavior: "smooth"})
   }
 
+  //Observador para el efecto de las tarjetas
   const thresholdValor=0;
   const [elementoRef, intersectado]= useIntersection({
     threshold: thresholdValor,
@@ -58,7 +68,14 @@ function App() {
   const [elementoRef7, intersectado7]= useIntersection({
     threshold: thresholdValor,
   });
+  const [elementWpFb, intersectadoWpFb]= useIntersection({
+    threshold: thresholdValor,
+  });
+  const [elementWpFbFooter, intersectadoWpFbFooter]= useIntersection({
+    threshold: thresholdValor,
+  });
 
+  //Datos del componenete Tarjeta (tajetas informativas de los virus)
   const tarjetas=[
     {
       titulo:"Ransomware",
@@ -152,55 +169,162 @@ function App() {
       color:"white"
     },
   ]
-
-  const headerContenido={
-    titulo:"¿Que es Delito Informatico?",
-    texto:"Son conductas ilegales realizadas por ciberdelincuentes en el ciberespacio a través de dispositivos electrónicos y redes informáticas. Consiste en estafas, robos de datos personales, de información comercial estratégica, suplantación de identidad, fraudes informáticos, ataques como cyberbulling, grooming, phishing cometidos por ciberdelincuentes que actúan en grupos o trabajan solos."
+  //Datos de los encabezados de los componenetes
+  const titulosDatos={
+    datHeader:[
+      {
+        h1:"¿Que es Delito Informatico?",
+        p:"Son conductas ilegales realizadas por ciberdelincuentes en el ciberespacio a través de dispositivos electrónicos y redes informáticas. Consiste en estafas, robos de datos personales, de información comercial estratégica, suplantación de identidad, fraudes informáticos, ataques como cyberbulling, grooming, phishing cometidos por ciberdelincuentes que actúan en grupos o trabajan solos.",
+      }
+    ],
+    datTarjeta:[
+      {
+        h2:"¿Qué es un Malware?",
+        p:"El término malware, software malicioso o virus informático hace referencia a un programa diseñado para infiltrarse en el sistema operativo de un dispositivo (tales como smartphones android y apple, computadoras, tablets) y alterar su funcionamiento. Este tipo de programas maliciosos son utilizados por ciberdelincuentes para robar información personal, contraseñas, archivos del disco duro, números de tarjetas de crédito y más. En la actualidad, el malware constituye uno de los ataques cibernéticos más frecuentes y, por tanto, representa un gran riesgo para la ciberseguridad de los usuarios.",
+        h3:"Tipos de Maleware",
+        p2:"Existen diversos tipos de Maleware, entre los mas comunes estan:",
+        elementWpFb:elementWpFb,
+        intersectadoWpFb:intersectadoWpFb,
+        animacion:"facebook 2.2s ease-in infinite",
+        animacion2:"whatsapp 2.2s ease-in infinite",
+      }
+    ],
+    datDenunciar:[
+      {
+        h2:"Si fuiste víctima de un ciberdelito, denuncialo",
+        p:"Tenés diferentes alternativas en todo el país. Comunícate con alguno de los siguientes organismos para solicitar asesoramiento de equipos especializados o presentar una denuncia.",
+        p2:"Recorda que tambien podes utilizar las",
+        p3:" Lineas: (102 y 137)",
+        p4:" para denunciar ciberdelitos y grooming",
+      }
+    ]
   }
+  //Botones de los componentes Header y Nav
   const btn=[
     {
       titulo:"Malware" ,
       click: controlMaleware,
+      clase:"menu_items"
     },
     {
       titulo:"Noticias" ,
       click: controlMaleware,
+      clase:"menu_items"
     },
     {
       titulo:"Denunciar" ,
       click: controlDenunciar,
-      ruta:"/denunciar",
+      clase:"menu_items"
     },
     {
       titulo:"Prevenir" ,
       click: controlPrevenir,
+      clase:"menu_items"
     }
   ]
-
+  //Datos de los componenetes Denunciar, BtnCoord,Map y las Tarjetas con info direcciones
+  const datosBtnDenunciar=[
+    {
+      nombre:"Fiscalía General",
+      coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.1669015533016!2d-65.20105396854498!3d-26.818710500353045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c22e59daa19%3A0xe35fc73627a4f2c0!2sTribunales%20de%20la%20provincia!5e0!3m2!1ses-419!2sar!4v1694395311597!5m2!1ses-419!2sar",
+      setCoordenada: setCoordenada,
+      tarjeta: tarjeta,
+      setTarjeta: setTarjeta,
+      setDatos,
+      dato:[{
+        h3:"Fiscalía General ante la Cámara Federal de Apelaciones de Tucumán",
+        p1:"Fiscal: GOMEZ, ANTONIO GUSTAVO",
+        p2:"Dirección: LAS PIEDRAS 418",
+        p3:"Mail: fcmfed-tcm@mpf.gov.ar",
+        p4:"Teléfono: (381) 4223524 / (381) 4311765 / (381) 4311072"
+      }]
+      
+    },
+    {
+      nombre:"Policía De Tucumán Unidad Regional Capital",
+      coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d521.7092438394544!2d-65.20664764736578!3d-26.81841838977988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c3c4f414309%3A0x72ac4255025436f0!2sPolic%C3%ADa%20De%20Tucum%C3%A1n%20Unidad%20Regional%20Capital!5e0!3m2!1ses-419!2sar!4v1694400866084!5m2!1ses-419!2sar",
+      setCoordenada: setCoordenada,
+      tarjeta: tarjeta2,
+      setTarjeta: setTarjeta2,
+      setDatos,
+      dato:[{
+        h3:"Unidad Regional Capital",
+        p2:"Direccion: Junín 850",
+        p4:"Telefono:  (381) 421-9197"
+      }]
+    },
+    {
+      nombre:"Ministerio de Seguridad Ciudadana",
+      coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.293025499574!2d-65.20298082600344!3d-26.830630776696186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c1ac329390d%3A0x72ecd2eb934dda95!2sMinisterio%20de%20Seguridad%20Ciudadana!5e0!3m2!1ses-419!2sar!4v1694402604965!5m2!1ses-419!2sar",
+      setCoordenada: setCoordenada,
+      tarjeta: tarjeta3,
+      setDatos,
+      setTarjeta: setTarjeta3,
+      dato:[{
+        h3:"Ministerio de Seguridad",
+        p2:"Direccion: Gral. José de San Martín 224",
+        p3:"Web: https://www.tucuman.gov.ar/",
+        p4:"Telefono: (381) 484-4000"
+      }]
+    },
+    {
+      nombre:"Fiscalía Federal Nº 2 de Tucumán",
+      coord:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.1669015533016!2d-65.20105396854498!3d-26.818710500353045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c22e59daa19%3A0xe35fc73627a4f2c0!2sTribunales%20de%20la%20provincia!5e0!3m2!1ses-419!2sar!4v1694395311597!5m2!1ses-419!2sar",
+      setCoordenada: setCoordenada,
+      tarjeta: tarjeta4,
+      setDatos,
+      setTarjeta: setTarjeta4,
+      dato:[{
+        h3:"Fiscalía Federal Nº 2 de Tucumán",
+        p1:"Fiscal: CAMUÑA, PABLO / CHIT, JOSE AGUSTIN",
+        p2:"Dirección: LAS PIEDRAS 418",
+        p3:"Mail: fisfed2-tcm@mpf.gov.ar",
+        p4:"Teléfono: (381) 4311190"
+      }]
+    }
+  ]
+  //Datos del componente Footer
+  const datosFooter=[
+    {
+      elementWpFb:elementWpFbFooter,
+      intersectadoWpFb:intersectadoWpFbFooter,
+      animacion:"facebook 2.2s ease-in infinite",
+      animacion2:"whatsapp 2.2s ease-in infinite",
+    }
+  ]
 
   return (
     <div className="App">
 
       {
         (btnMaleware||btnDenunciar||btnPrevenir)===false
-        ?<Header contenido={headerContenido} btn={btn}/>
+        ?<Header contenido={titulosDatos} btn={btn}/>
         :<Nav btn={btn}/>
       }
-
-      
       
       {
-        btnMaleware?<Tarjetas tarjetas={tarjetas}/>:<></>
+        btnMaleware
+          ?<Tarjetas 
+            titulosDatos={titulosDatos} 
+            tarjetas={tarjetas}/>
+          :<></>
       }
       {
-        btnDenunciar?<Denunciar/>:<></>
+        btnDenunciar
+          ?<Denunciar 
+              contenido={titulosDatos} 
+              btn={datosBtnDenunciar} 
+              datoCoordenada={coordenada} 
+              datosTarjeas={datos} 
+            />
+          :<></>
       }
       {
-        btnPrevenir?<Prevenir/>:<></>
+        btnPrevenir?<Prevenir titulosDatos={titulosDatos}/>:<></>
       }
       
       {
-        btnDenunciar||btnMaleware||btnPrevenir?<Footer/>:<></>
+        btnDenunciar||btnMaleware||btnPrevenir?<Footer datosFooter={datosFooter}/>:<></>
       }
       
     </div>

@@ -12,10 +12,11 @@ function useIntersection(opciones ={}){
             });
         },opciones);
 
+        //Cuando entra en el vport lo observa
         if(elemento){
             observer.observe(elemento)
         }
-
+        //Cuando sale del vport lo deja de observar
         return ()=>{
             if(elemento){
                 observer.unobserve(elemento);

@@ -2,6 +2,7 @@ import Redes from '../Redes';
 import './Footer.css'
 
 const Footer =(props)=>{
+    const {datosFooter}=props;
     return <footer className='footer'>
         <section className='footer_logo'>
             <img src='./logoies.png' alt=''/>
@@ -22,8 +23,18 @@ const Footer =(props)=>{
             </div>
             
         </ul>
+        {
+            datosFooter.map(dato=>
+                <Redes
+                    clase='redes_footer'
+                    elementWpFb={dato.elementWpFb}
+                    intersectadoWpFb={dato.intersectadoWpFb}
+                    animacion={dato.animacion}
+                    animacion2={dato.animacion2}
+                />
+            )
+        }
         
-        <Redes clase='redes_footer'/>
         
     </footer>
 }

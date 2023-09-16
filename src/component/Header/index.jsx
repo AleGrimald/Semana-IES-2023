@@ -3,25 +3,24 @@ import Botones from '../Botones';
 
 const Header = (props)=>{
     const {contenido, btn}=props
-
+    const {datHeader}=contenido;
     return <header className="header">
-        
-        <section className="contenedor_texto">
-            <h1 className="header_titulo">{contenido.titulo}</h1>
-            <p className="header_texto">
-                {contenido.texto}
-            </p>
-        </section>
+        {
+            datHeader.map(dato=>
+            <section className="contenedor_texto">
+                <h1 className="header_titulo">{dato.h1}</h1>
+                <p className="header_texto">{dato.p}</p>
+            </section>)
+        }
                 
         <nav className="menu">
             {
                 btn.map((boton, key)=>
                     <Botones
-                        ruta={boton.ruta} 
                         key={key} 
                         click={boton.click} 
                         titulo={boton.titulo}
-                        clase={"menu_items"}
+                        clase={boton.clase}
                     />                  
                 )
             }

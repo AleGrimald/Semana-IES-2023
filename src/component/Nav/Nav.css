@@ -10,6 +10,7 @@
     background: linear-gradient(45deg, rgba(27, 36, 124), rgba(93, 108, 170));
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    z-index: 10;
 }
 
 @media (min-width: 360px) and (max-width: 767px){
