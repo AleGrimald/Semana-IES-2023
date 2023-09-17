@@ -54,6 +54,7 @@ function App() {
     setBtnPrevenir(!btnPrevenir);
     setBtnMaleware(false);
     setBtnDenunciar(false);
+    setBtnNoticias(false);
     window.scrollTo({top:0, behavior: "smooth"})
   }
 
