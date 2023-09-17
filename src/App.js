@@ -180,7 +180,7 @@ function App() {
       sombra:"2px 2px 10px 5px #765b7ccb",
       color:"white"
     },
-  ]
+  ];
   //Datos de los encabezados de los componenetes
   const titulosDatos={
     datHeader:[
@@ -233,7 +233,7 @@ function App() {
       click: controlPrevenir,
       clase:"menu_items"
     }
-  ]
+  ];
   //Datos de los componenetes Denunciar, BtnCoord,Map y las Tarjetas con info direcciones
   const datosBtnDenunciar=[
     {
@@ -294,7 +294,7 @@ function App() {
         p4:"Teléfono: (381) 4311190"
       }]
     }
-  ]
+  ];
   //Datos del componente Footer
   const datosFooter=[
     {
@@ -303,10 +303,10 @@ function App() {
       animacion:"facebook 2.2s ease-in infinite",
       animacion2:"whatsapp 2.2s ease-in infinite",
     }
-  ]
+  ];
   const datosNoticia=[
     {
-      h2:"¿Que son las FackeNews?",
+      h2:"¿Que son las Fake News?",
       p:"consiste en un contenido seudoperiodístico difundido a través de portales de noticias, prensa escrita, radio, televisión y redes sociales y que tiene como objetivo desinformar a un público en específico. Se diseña y emite con la intención deliberada de engañar, inducir a error, manipular decisiones personales, desprestigiar o enaltecer a una institución, entidad o persona u obtener ganancias económicas o rédito político.",
       video:"https://www.youtube.com/embed/SEQhQeYsLlI?si=npV2MzfK_Bz9oaEy",
       clase:"noticia"

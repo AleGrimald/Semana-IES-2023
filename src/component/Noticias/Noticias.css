@@ -10,3 +10,11 @@
     gap: 5rem;
     background: linear-gradient(120deg,rgb(231, 235, 237), rgb(155, 173, 252, 0.349),rgb(81, 120, 236, 0.449),rgba(16, 53, 164, 0.649));
 }
+
+@media (min-width: 360px) and (max-width: 767px){
+    .noticias{
+        padding: 5rem 0 3rem 0;
+        gap: 2rem;
+    }
+
+}
