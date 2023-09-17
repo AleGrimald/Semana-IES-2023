@@ -9,11 +9,13 @@ import Tarjetas from './component/Tarjetas';
 import Denunciar from './component/Denunciar';
 import Prevenir from './component/Prevenir';
 import Footer from './component/Footer';
+import Noticias from './component/Noticias';
 
 function App() {
   const [btnMaleware, setBtnMaleware]= useState(false);
   const [btnDenunciar, setBtnDenunciar]= useState(false);
   const [btnPrevenir, setBtnPrevenir]= useState(false);
+  const [btnNoticias, setBtnNoticias]=useState(false);
   const [datos, setDatos] = useState([]);
   const [coordenada, setCoordenada]= useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2871895368685!2d-65.20518169636479!3d-26.830816455657708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c106f2afc99%3A0xe97bef14f2ad881a!2sPlaza%20Independencia!5e0!3m2!1ses-419!2sar!4v1694418283826!5m2!1ses-419!2sar");
   const [tarjeta, setTarjeta] = useState(false);
@@ -28,11 +30,21 @@ function App() {
     setBtnMaleware(!btnMaleware);
     setBtnDenunciar(false);
     setBtnPrevenir(false);
+    setBtnNoticias(false);
     window.scrollTo({top:0, behavior: "smooth"})
   }
   const controlDenunciar=(event)=>{
     event.preventDefault();
     setBtnDenunciar(!btnDenunciar);
+    setBtnMaleware(false);
+    setBtnPrevenir(false);
+    setBtnNoticias(false);
+    window.scrollTo({top:0, behavior: "smooth"})
+  }
+  const controlNoticias=(event)=>{
+    event.preventDefault();
+    setBtnNoticias(!btnNoticias);
+    setBtnDenunciar(false);
     setBtnMaleware(false);
     setBtnPrevenir(false);
     window.scrollTo({top:0, behavior: "smooth"})
@@ -208,7 +220,7 @@ function App() {
     },
     {
       titulo:"Noticias" ,
-      click: controlMaleware,
+      click: controlNoticias,
       clase:"menu_items"
     },
     {
@@ -292,12 +304,76 @@ function App() {
       animacion2:"whatsapp 2.2s ease-in infinite",
     }
   ]
+  const datosNoticia=[
+    {
+      h2:"¿Que son las FackeNews?",
+      p:"consiste en un contenido seudoperiodístico difundido a través de portales de noticias, prensa escrita, radio, televisión y redes sociales y que tiene como objetivo desinformar a un público en específico. Se diseña y emite con la intención deliberada de engañar, inducir a error, manipular decisiones personales, desprestigiar o enaltecer a una institución, entidad o persona u obtener ganancias económicas o rédito político.",
+      video:"https://www.youtube.com/embed/SEQhQeYsLlI?si=npV2MzfK_Bz9oaEy",
+      clase:"noticia"
+    },
+    {
+      h2:"¿Que es Ingenieria Social?",
+      p:"Se llama ingeniería social a las diferentes técnicas de manipulación que usan los ciberdelincuentes para obtener información confidencial de los usuarios. El objetivo de este engaño es apropiarse de datos personales, contraseñas o suplantar la identidad de la persona engañada.",
+      video:"https://www.youtube.com/embed/PN0j35dbG-8?si=1vTZBmH63MEZqQtT",
+      clase:"noticia"
+    },
+    {
+      h2:"El Cronista",
+      p:"Alerta de Hackeos",
+      img:"./ElCronista.png",
+      link:"https://www.cronista.com/infotechnology/actualidad/alerta-hackers-argentina-recibio-mas-de-1000-millones-de-intentos-de-ataque/",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Todo Noticias",
+      p:"Estafas virtuales y robo de dinero",
+      img:"./Tn2.png",
+      link:"https://tn.com.ar/tecno/novedades/2023/06/08/las-6-estafas-virtuales-mas-usadas-por-ciberdelincuentes-para-robar-datos-y-vaciar-cuentas-bancarias/?gclid=CjwKCAjwpJWoBhA8EiwAHZFzfsEvTDv5R8-gD50ZUk-Crxw2P8oReMdc02aNHPUW5vrUrpCadZfhMBoCCrcQAvD_BwE",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Clarin",
+      p:"Hacko a la base de datos de PAMI",
+      img:"./Clarin.png",
+      link:"https://www.clarin.com/tecnologia/pami-confirmo-ciberataque-ransomware-aseguran-mitigado-_0_U29WNR9srI.html?gclid=CjwKCAjwpJWoBhA8EiwAHZFzfmd7IYb0davQc8XQEzVR2mJmgWJxgtK9qGbFGSNv3nOVbgcMGv01IxoC1oQQAvD_BwE",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Infobae",
+      p:"Millones de ataques al año",
+      img:"./Infobae.png",
+      link:"https://www.cronista.com/infotechnology/actualidad/alerta-hackers-argentina-recibio-mas-de-1000-millones-de-intentos-de-ataque/",
+      clase:"seccion_img"
+    },
+    {
+      h2:"La Nacion",
+      p:"Ransomware en las Farmacias",
+      img:"./LaNacion.png",
+      link:"https://www.lanacion.com.ar/tecnologia/como-se-gesto-el-ataque-por-ransomware-que-paralizo-por-varios-dias-a-las-farmacias-de-todo-el-pais-nid17052023/",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Clarin",
+      p:"Las companias aplican medidas para protegerse de los cyberataques",
+      img:"./Clarin2.png",
+      link:"https://www.clarin.com/tecnologia/ciberataques-empresas-argentinas-alza-medidas-clave-proteger-cualquier-compania_0_ESNySekPMu.html",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Todo Noticias",
+      p:"Se filtran 11 millones de registros",
+      img:"./Tn.png",
+      link:"https://tn.com.ar/tecno/novedades/2023/05/25/ciberataque-filtran-una-base-de-datos-con-11-millones-de-registros-de-ciudadanos-argentinos/",
+      clase:"seccion_img"
+    },
+    
+  ];
 
   return (
     <div className="App">
 
       {
-        (btnMaleware||btnDenunciar||btnPrevenir)===false
+        (btnMaleware||btnDenunciar||btnPrevenir||btnNoticias)===false
         ?<Header contenido={titulosDatos} btn={btn}/>
         :<Nav btn={btn}/>
       }
@@ -320,11 +396,22 @@ function App() {
           :<></>
       }
       {
-        btnPrevenir?<Prevenir titulosDatos={titulosDatos}/>:<></>
+        btnNoticias
+          ?<Noticias
+              datos={datosNoticia}
+            />
+          :<></>
+      }
+      {
+        btnPrevenir
+          ?<Prevenir
+              titulosDatos={titulosDatos}
+            />
+          :<></>
       }
       
       {
-        btnDenunciar||btnMaleware||btnPrevenir?<Footer datosFooter={datosFooter}/>:<></>
+        btnDenunciar||btnMaleware||btnPrevenir||btnNoticias?<Footer datosFooter={datosFooter}/>:<></>
       }
       
     </div>

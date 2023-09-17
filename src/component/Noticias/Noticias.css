@@ -1,0 +1,12 @@
+.noticias{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 8rem 0 3rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: center;
+    gap: 5rem;
+    background: linear-gradient(120deg,rgb(231, 235, 237), rgb(155, 173, 252, 0.349),rgb(81, 120, 236, 0.449),rgba(16, 53, 164, 0.649));
+}
