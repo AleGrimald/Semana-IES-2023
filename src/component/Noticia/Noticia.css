@@ -118,8 +118,9 @@
 
         /*Tarjeta con Imagen*/
     .seccion_img{
+        border-radius: 15px;
         gap: .5rem;
-        padding: 0rem .5rem; 
+        padding: .1rem .5rem; 
     }
     .noticia_img{
         height: 10rem;
