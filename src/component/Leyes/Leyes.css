@@ -5,6 +5,10 @@
     justify-content: top;
     align-items: center;
     margin-bottom: 1.5rem;
+    padding: .7rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(6, 3, 63, 0.55);
+    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
 }
 .leyes_contenedor_titulo{
     width: 100%;
@@ -22,14 +26,25 @@
     gap: 1rem;
     margin-top: .6rem;
 }
+.leyes_h4{
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
 
 .leyes_a1,.leyes_a2{
     padding: .4rem .8rem;
     background-color: rgba(57, 140, 228, 0.904);
     border-radius: 15px;
     color: white;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     text-decoration: none;
+}
+.leyes_p{
+    color:white;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 @media (min-width: 360px) and (max-width: 767px){
@@ -48,10 +63,16 @@
     .leyes_h4{
         font-size: 18px;
         font-weight: 500;
+        color: white;
     }
     .leyes_a1,.leyes_a2{
         padding: .4rem .8rem;
         font-weight: 500;
         font-size: 16px;
+    }
+    .leyes_p{
+        color:white;
+        font-size: 16px;
+        font-weight: 400;
     }
 }

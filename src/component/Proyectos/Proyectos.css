@@ -18,17 +18,20 @@
 .proyecto_h2{
     width: 100%;
     margin: 2rem 0 .6rem 0;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
 }
 .proyecto_p{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     text-align: justify;
     padding: 1rem 0rem;
+    color:white;
 }
 
 .proyecto_contenedor_lista{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: top;
@@ -36,6 +39,22 @@
     text-align: justify;
     gap: 1rem;
     margin: 1rem 0 2rem 0;
+    padding: 1rem 1.7rem;
+    border-radius: 20px;
+    background-color: rgba(6, 3, 63, 0.55);
+    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
+}
+.proyecto_contenedor_lista>li{
+    color:white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a{
+    color:white
+}
+a:hover{
+    color:rgb(71, 172, 255)
 }
 
 @media (min-width: 360px) and (max-width: 767px){
