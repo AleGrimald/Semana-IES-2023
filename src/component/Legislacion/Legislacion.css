@@ -36,17 +36,18 @@
     }
     .legislacion_contenedor_titulo,.legislacion_contenedor_texto
     {
-        width: 75%;
+        width: 90%;
         justify-content: top;
         align-items: center;
     }
     .legislacion_h2{
         margin: .5rem 0 .5rem 0rem;
         font-size: 24px;
+        text-align: center;
     }
     .legislacion_p{
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 400;
         text-align: left;
         padding: 0 ;
     }

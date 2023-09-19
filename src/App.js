@@ -96,7 +96,7 @@ function App() {
       clase:"ran",
       img:"./ransonware.png",
       tarjeta:"tarjeta_ran",
-      animacion:"tarjeta_derecha 2s ease-in",
+      animacion:"tarjeta_derecha .5s ease-out",
       intersector:intersectado,
       referencia: elementoRef,
       fondo:"#ff646488",
@@ -109,7 +109,7 @@ function App() {
       clase:"spy",
       img:"./spyware.jpg",
       tarjeta:"tarjeta_spy",
-      animacion:"tarjeta_izquierda 2s ease-in",
+      animacion:"tarjeta_izquierda .5s ease-out",
       intersector:intersectado2,
       referencia: elementoRef2,
       fondo:"#5ecdd1b4",
@@ -122,7 +122,7 @@ function App() {
       clase:"gus",
       img:"./gusano.jpg",
       tarjeta:"tarjeta_gus",
-      animacion:"tarjeta_derecha 2s ease-in",
+      animacion:"tarjeta_derecha .5s ease-out",
       intersector:intersectado3,
       referencia: elementoRef3,
       fondo:"#58e464b4",
@@ -135,7 +135,7 @@ function App() {
       clase:"tro",
       img:"./troyano.png",
       tarjeta:"tarjeta_tro",
-      animacion:"tarjeta_izquierda 2s ease-in",
+      animacion:"tarjeta_izquierda .5s ease-out",
       intersector:intersectado4,
       referencia: elementoRef4,
       fondo:"#ff00e4da",
@@ -148,7 +148,7 @@ function App() {
       clase:"adw",
       img:"./adware.jpg",
       tarjeta:"tarjeta_adw",
-      animacion:"tarjeta_derecha 2s ease-in",
+      animacion:"tarjeta_derecha .5s ease-out",
       intersector:intersectado5,
       referencia: elementoRef5,
       fondo:"#453ea593",
@@ -161,7 +161,7 @@ function App() {
       clase:"bot",
       img:"./botnet.png",
       tarjeta:"tarjeta_bot",
-      animacion:"tarjeta_izquierda 2s ease-in",
+      animacion:"tarjeta_izquierda .5s ease-out",
       intersector:intersectado6,
       referencia: elementoRef6,
       fondo:"#a57c3eb7",
@@ -174,7 +174,7 @@ function App() {
       clase:"roo",
       img:"./rootkit.webp",
       tarjeta:"tarjeta_roo",
-      animacion:"tarjeta_derecha 2s ease-in",
+      animacion:"tarjeta_derecha .5s ease-out",
       intersector:intersectado7,
       referencia: elementoRef7,
       fondo:"#b991c2b7",
@@ -210,7 +210,31 @@ function App() {
         p3:" Lineas: (102 y 137)",
         p4:" para denunciar ciberdelitos y grooming",
       }
-    ]
+    ],
+    datPrevenir:{
+      h2:"Recomendaciones para evitar estafas en internet",
+      p:"Si tenés dudas sobre dónde denunciar, recordá que siempre lo podes hacer en comisarías, fiscalías o a través de la línea 137.",
+      video:{
+        h2:"¿Como nos atacan? y ¿Que es Ingenieria Social?",
+        p:"Se llama ingeniería social a las diferentes técnicas de manipulación que usan los ciberdelincuentes para obtener información confidencial de los usuarios. El objetivo de este engaño es apropiarse de datos personales, contraseñas o suplantar la identidad de la persona engañada.",
+        link:"https://www.youtube.com/embed/PN0j35dbG-8?si=1vTZBmH63MEZqQtT",
+        clase:"noticia"
+      },
+      parrafo:[
+        "Nunca respondas correos electrónicos que te soliciten datos personales y no hagas click en el enlace que te compartan",
+        "Protejé tu información con contraseñas que sean difíciles de adivinar y, si podes, cámbialas periódicamente",
+        "La estafa puede llevar mediante distintos medios: correos electrónicos, mensajes de texto, WhatsApp o redes sociales",
+        "Nunca un banco o un organismo público te va a pedir que cambies tus datos personales o claves por internet, a través de un enlace enviado en un correo, por redes sociales o mediante un llamado telefónico ¡No compartas tu información!",
+        "A la hora de hacer una transferencia, comprobá que se haya completado. Préstale atención a la gestión que realices mediante el Home Banking: acordate que el débito inmediato (Debin) quita dinero de la cuenta",
+        "Es importante que estés atento a la redacción del mensaje o en el enlace enviado. Muchas veces, es casi imperceptibles, pero en algún lugar dejan ver el fraude: faltas de ortografías u alteraciones en la url que supuestamente es oficial",
+        "No confíes en avisos promocionales, regalos, descuentos, préstamos o algún corte de servicio. Es necesario que corrobores siempre la veracidad.",
+        " Infórmate sobre la reputación de la tienda o el sitio antes de realizar una compra en línea. La experiencia de otro usuario puede servirnos y mucho",
+        "Si podés, es importante usar el doble factor de autenticación en todas las aplicaciones",
+        "Si tenés que cambiar la contraseña, asegurarse de hacerlo siempre desde el sitio oficial del banco o de la aplicación",
+        " Si te contactan desde un organismo público o privado vía WhatsApp, verificá el logo de autenticación del organismo público que se está contactando."
+      ]
+    }
+      
   }
   //Botones de los componentes Header y Nav
   const btn=[
@@ -313,12 +337,6 @@ function App() {
       clase:"noticia"
     },
     {
-      h2:"¿Que es Ingenieria Social?",
-      p:"Se llama ingeniería social a las diferentes técnicas de manipulación que usan los ciberdelincuentes para obtener información confidencial de los usuarios. El objetivo de este engaño es apropiarse de datos personales, contraseñas o suplantar la identidad de la persona engañada.",
-      video:"https://www.youtube.com/embed/PN0j35dbG-8?si=1vTZBmH63MEZqQtT",
-      clase:"noticia"
-    },
-    {
       h2:"El Cronista",
       p:"Alerta de Hackeos",
       img:"./ElCronista.png",
@@ -366,8 +384,7 @@ function App() {
       img:"./Tn.png",
       link:"https://tn.com.ar/tecno/novedades/2023/05/25/ciberataque-filtran-una-base-de-datos-con-11-millones-de-registros-de-ciudadanos-argentinos/",
       clase:"seccion_img"
-    },
-    
+    },    
   ];
 
   return (
@@ -412,7 +429,11 @@ function App() {
       }
       
       {
-        btnDenunciar||btnMaleware||btnPrevenir||btnNoticias?<Footer datosFooter={datosFooter}/>:<></>
+        (btnDenunciar||btnMaleware||btnPrevenir||btnNoticias)
+          ?<Footer
+           datosFooter={datosFooter}
+          />
+          :<></>
       }
       
     </div>

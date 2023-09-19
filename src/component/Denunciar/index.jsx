@@ -8,8 +8,8 @@ const Denunciar = (props)=>{
 
     return <section className='contenedor_denuncia' id='denunciar'> 
         {
-            datDenunciar.map(dato=>
-            <section className='denuncia_titulo'>
+            datDenunciar.map((dato, key)=>
+            <section key={key} className='denuncia_titulo'>
                 <h2 className='titulod_h2'>{dato.h2}</h2>
                 <p className='titulod_p'>{dato.p}</p>
                 <p style={{marginTop:"1rem"}} className='titulod_p'>

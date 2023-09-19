@@ -6,8 +6,8 @@ const Header = (props)=>{
     const {datHeader}=contenido;
     return <header className="header">
         {
-            datHeader.map(dato=>
-            <section className="contenedor_texto">
+            datHeader.map((dato, key)=>
+            <section key={key} className="contenedor_texto">
                 <h1 className="header_titulo">{dato.h1}</h1>
                 <p className="header_texto">{dato.p}</p>
             </section>)

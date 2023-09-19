@@ -53,7 +53,7 @@ const Legislacion=()=>{
     return <section className='legislacion'>
         <div className='legislacion_contenedor_titulo'>
             <h2 className='legislacion_h2'>Legislacion</h2>
-            <Redes clase='redes grooming_redes'/>
+            <Redes clase='redes estafa_redes'/>
         </div>
 
         <div className='legislacion_contenedor_texto'>

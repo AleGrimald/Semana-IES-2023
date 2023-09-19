@@ -6,6 +6,7 @@
     gap: 2rem;
     margin-bottom: 1.5rem;
 }
+
 .redes_h3{
     padding-right: 1rem;
     margin-left: 1rem;
@@ -20,6 +21,7 @@
 
 .redes_link>a>img{
     width: 50px;
+    border-radius: 50%;
     text-align: center;
     margin-right: 1rem;
     padding: .6rem;
@@ -91,7 +93,7 @@
         gap: 1rem;
         padding-bottom: 2rem;
     }
-    .grooming_redes{
+    .estafa_redes{
         width:100%;
         height:auto;
         justify-content: center;
@@ -99,14 +101,18 @@
         gap: .6rem;
         padding-bottom: 0;
     }
-    .grooming_redes>h3{
+    .estafa_redes>h3{
         padding-right: .6rem;
         font-size: 16px;
         margin: 0;
     }
-    .grooming_redes>div>a>img{
-        width: 2.5rem;
-        padding: 0 .5rem;
+    .estafa_redes>div{
+        margin-left: .8rem;
+    }
+    .estafa_redes>div>a>img{
+        width: 2rem;
+        padding: .2rem;
+        border-radius: 50%;
     }
 }
 

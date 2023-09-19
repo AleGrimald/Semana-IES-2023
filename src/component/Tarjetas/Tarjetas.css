@@ -131,50 +131,9 @@ iframe{
 
 @keyframes tarjeta_izquierda {
 	0% {
-		animation-timing-function: ease-in;
-		opacity: .2;
+		animation-timing-function: ease-out;
+		opacity: 0;
 		transform: translateX(-50px);
-	}
-
-	24% {
-		opacity: .4;
-	}
-
-	40% {
-		animation-timing-function: ease-in;
-		transform: translateX(-26px);
-		opacity: .6;
-	}
-
-	65% {
-		animation-timing-function: ease-in;
-		transform: translateX(-13px);
-		opacity: .7;
-	}
-
-	82% {
-		animation-timing-function: ease-in;
-		transform: translateX(-6.5px);
-	}
-
-	93% {
-		animation-timing-function: ease-in;
-		transform: translateX(-4px);
-		opacity: .8;
-	}
-
-	25%,
-	55%,
-	75%,
-	87%,
-	98% {
-		animation-timing-function: ease-out;
-		transform: translateX(0px);
-	}
-
-	98% {
-		animation-timing-function: ease-out;
-		transform: translateX(0px);
 	}
 
 	100% {
@@ -186,45 +145,9 @@ iframe{
 
 @keyframes tarjeta_derecha {
 	0% {
-		animation-timing-function: ease-in;
-		opacity: .2;
-		transform: translateX(30px);
-	}
-
-	24% {
-		opacity: .4;
-	}
-
-	40% {
-		animation-timing-function: ease-in;
-		transform: translateX(26px);
-		opacity: .6;
-	}
-
-	65% {
-		animation-timing-function: ease-in;
-		transform: translateX(13px);
-		opacity: .7;
-	}
-
-	82% {
-		animation-timing-function: ease-in;
-		transform: translateX(6.5px);
-	}
-
-	93% {
-		animation-timing-function: ease-in;
-		transform: translateX(4px);
-		opacity: .8;
-	}
-
-	25%,
-	55%,
-	75%,
-	87%,
-	98% {
 		animation-timing-function: ease-out;
-		transform: translateX(0px);
+		opacity: 0;
+		transform: translateX(30px);
 	}
 
 	100% {

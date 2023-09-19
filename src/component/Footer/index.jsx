@@ -24,13 +24,14 @@ const Footer =(props)=>{
             
         </ul>
         {
-            datosFooter.map(dato=>
+            datosFooter.map((dato, key)=>
                 <Redes
                     clase='redes_footer'
                     elementWpFb={dato.elementWpFb}
                     intersectadoWpFb={dato.intersectadoWpFb}
                     animacion={dato.animacion}
                     animacion2={dato.animacion2}
+                    key={key}
                 />
             )
         }

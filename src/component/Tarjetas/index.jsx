@@ -64,13 +64,11 @@ const Tarjetas = (props)=>{
                                 boxShadow: tarjeta.sombra
                             }
                         }
-                        key={key+1}
                     >
                         <h4 style={{color:tarjeta.color}}className='tarjeta_titulo'>{tarjeta.titulo}</h4>
                         <p  style={{color:tarjeta.color}}className="tarjeta_texto">{tarjeta.texto}</p>
                     </div>
                     <img
-                        key={key+2}
                         className="imagen" 
                         src={tarjeta.img} 
                         style={{backgroundColor:tarjeta.color}} 

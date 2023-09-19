@@ -1,8 +1,8 @@
 import './Redes.css'
 
 const Redes = (props) =>{
-    const {clase,intersectadoWpFb,elementWpFb,animacion,animacion2}=props;
-    return <section  className={clase}>
+    const {clase,intersectadoWpFb,elementWpFb,animacion,animacion2, key}=props;
+    return <section key={key}  className={clase}>
         <h3 className='redes_h3'>
             Compartir en<br/> redes sociales
         </h3>

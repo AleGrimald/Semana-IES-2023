@@ -35,7 +35,7 @@ const Noticia=(props)=>{
                     picture-in-picture; 
                     web-share
                     " 
-                    allowFullscreen
+                    allowFullScreen
                 > </iframe>
             </div>:<></>
         }

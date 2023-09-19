@@ -1,135 +1,247 @@
-.grooming{
+.prevenir{
     width: 100%;
-    padding-top: 10rem;
+    height: auto;
+    padding: 5rem 0 3rem 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-    background: linear-gradient(90deg,rgb(151, 220, 255),white 14%,white 85%,rgb(151, 220, 255));
-}
-.grooming_h2{
-    font-size: 35px;
-    margin: 2rem 0 1rem 0;
+    gap: 2rem;
 }
 
-.grooming_p1,.grooming_p2{
-    width: 70%;
+.contenedor_estafa{
+    width: 90%;
+    padding: 2rem 1rem;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center; 
+    justify-content: top;
+    align-items: center;
+    gap: 1rem;
 }
-.p1,.p2{
-    font-size: 18px;
-    font-weight: 400;
-    text-align: justify;
-    padding: 1rem 3rem;
-}
-
-.lista_l1{
-    width: 70%;
+.estafa_titulo{
     display: flex;
     flex-flow: column nowrap;
     justify-content: top;
     align-items: left;
-    text-align: justify;
-    gap: 1rem;
-    margin: 1rem 0 2rem 0;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
-.lista_l1>l1{
-    list-style: inside;
-    
+.estafa_h2{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;;
+    text-align: left;
+}
+.estafa_ul{
+    width: 80%;
+    text-align: justify;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+    padding: 1.5rem 2rem 1rem 2rem;
+    border-radius: 20px;
+    background-color: rgba(6, 3, 63, 0.55);
+    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
+}
+.estafa_ul>li,.p1{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding: .5rem 0;
+    color: white;
+}
+.contenedor_video{
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+.estafa_p_video{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(6, 3, 63, 0.55);
+    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
+}
+.p_video{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
 }
 
+.contenedor_grooming{
+    width: 90%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: center;
+    gap: 1rem;
+}
+.grooming_texto1{
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: top;
+    align-items: left;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    background-color: rgba(6, 3, 63, 0.55);
+    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
+
+}
+.grooming_h2{
+    width: 80%;
+    margin: 1rem 0;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;;
+    text-align: left;
+}
+.grooming_p1{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding: 0rem 1rem;
+    color: white;
+    text-align: left;
+}
+.grooming_ul{
+    width: 100%;
+    text-align: justify;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+.grooming_ul>li{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;;
+    color: white;
+}
 .grooming_video{
-    width: 60%;
-    height: 30rem;
-    margin: 1rem 0 2rem 0;
+    width: 75%;
+    height: 25rem;
+    margin: 2rem 0;
+    border: 3px solid rgba(6, 3, 63, 0.85);
 }
 
 .contenedor_btn{
-    width: 80%;
-    margin: 2rem 0 1rem 0;
+    width: 90%;
+    height: 10rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 2rem;
 }
 .btn{
     width: 30%;
-    height: 5rem;
-    font-size: 20px;
-    font-weight: 600;
-    padding-left: 1rem;
+    height: 60%;
+    padding: .5rem 1rem;
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem ;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
     border-radius: 15px;
-    border: .5px solid rgba(0, 0, 0, 0.3);
-    
+    border: 3px solid rgba(6, 3, 63, 0.85);
 }
 .btn>img{
-    width: 15%;
+    width: 20%;
 }
 
 @media (min-width: 360px) and (max-width: 767px){
-    .grooming{
-        padding-top: 5rem;
-    }
-    .grooming_titulo{
-        width: 90%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: top;
-        align-items: left;
-        gap: 1rem;
-    }
-    .grooming_h2{
-        font-size: 22px;
-        margin: 0;
-    }
-    .grooming_p1,.grooming_p2{
-        width: 80%;
-        padding: 1rem;
-    }
-    .p1,.p2{
-        font-size: 18px;
-        font-weight: 500;
-        text-align: left;
-        padding: 1rem 0;
-    }
-
-    .lista_l1{
-        width: 90%;
-        text-align: left;
-        font-size: 18px;
-        font-weight: 500;
-        gap: 1rem;
-        margin: 1rem 0;
-    }
-
-    .grooming_video{
-        width: 70%;
-        height: 10rem;
-        margin: 1rem 0;
-    }
-    
-    .contenedor_btn{
+    .estafa_titulo{
         width: 100%;
-        margin: 1rem 0;
-        flex-flow: column nowrap;
+        align-items: center;
+        padding:0;
         gap: 1rem;
+        margin-bottom: 0;
+    }
+    .estafa_h2,.grooming_h2{
+        width: 100%;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .estafa_ul{
+        width: 100%;
+        text-align: left;
+        justify-content: top;
+        align-items: center;
+        padding: 1rem 1rem 1rem 2rem;
+        border-radius: 15px;
+    }
+    .estafa_ul>li,.p1{
+        font-size: 16px;
+        font-weight: 400;
+        padding: .5rem;
+    }
+    .contenedor_video{
+        width: 100%;
+        gap: 1rem;
+        padding: 0;
+    }
+    .estafa_p_video{
+        width: 100%;
+        border-radius: 15px;
+    }
+    .p_video{
+        font-size: 16px;
+        text-align: left;
+        color: white;
+    }
+    .grooming_video{
+        width: 100%;
+        height: 13rem;
+        margin: 1rem 0 0 0;
+    }
+    .grooming_texto1{
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+        padding: .5rem .5rem;
+        margin-bottom: 1rem;
+        border-radius: 15px;
+    }
+
+    .grooming_p1{
+        font-size: 16px;
+    }
+    .grooming_ul{
+        width: 100%;
+        text-align: left;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+    }
+    .grooming_ul>li{
+        font-size: 16px;
+    }
+
+    .contenedor_btn{
+    width: 100%;
+    height: 10rem;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1rem;
+
     }
     .btn{
-        width: 65%;
-        height: 4rem;
-        font-size: 20px;
-        font-weight: 600;        
-    }
-    .btn>img{
-        width: 18%;
+        width: 80%;
+        gap: 1.5rem ;
     }
 }
 
