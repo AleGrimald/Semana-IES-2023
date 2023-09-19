@@ -10,7 +10,7 @@ const Nav=(props)=>{
                     key={key} 
                     click={boton.click} 
                     titulo={boton.titulo}
-                    clase={boton.clase}
+                    clase="btn_nav"
                 />
             )
         }
