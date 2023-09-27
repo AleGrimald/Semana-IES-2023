@@ -1,11 +1,22 @@
 import './Proyectos.css'
 import Redes from '../Redes'
 
-const Proyectos=()=>{
+const Proyectos=(props)=>{
+    const {datTarjeta}=props.titulosDatos;
     return <section className='proyecto'>
         <div className='proyecto_contenedor_titulo'>
             <h2 className='proyecto_h2'>Proyectos</h2>
-            <Redes clase='redes estafa_redes'/>
+            {
+                datTarjeta.map(dato=>
+                    <Redes
+                    clase='redes estafa_redes'
+                    elementWpFb={dato.elementWpFb} 
+                    intersectadoWpFb={dato.intersectadoWpFb}
+                    animacion={dato.animacion}
+                    animacion2={dato.animacion2} 
+                    />
+                )
+            }
         </div>
 
         <div className='proyecto_contenedor_texto'>

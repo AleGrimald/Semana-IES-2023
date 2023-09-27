@@ -2,7 +2,8 @@ import './Legislacion.css';
 import Redes from '../Redes';
 import Leyes from '../Leyes';
 
-const Legislacion=()=>{
+const Legislacion=(props)=>{
+    const {datTarjeta}=props.titulosDatos;
     const leyes=[
         {
             h4:"Ley 27.590 Mica Ortega - Prevención y Concientización del grooming",
@@ -53,7 +54,17 @@ const Legislacion=()=>{
     return <section className='legislacion'>
         <div className='legislacion_contenedor_titulo'>
             <h2 className='legislacion_h2'>Legislacion</h2>
-            <Redes clase='redes estafa_redes'/>
+            {
+                datTarjeta.map(dato=>
+                    <Redes
+                    clase='redes estafa_redes'
+                    elementWpFb={dato.elementWpFb} 
+                    intersectadoWpFb={dato.intersectadoWpFb}
+                    animacion={dato.animacion}
+                    animacion2={dato.animacion2} 
+                    />
+                )
+            }
         </div>
 
         <div className='legislacion_contenedor_texto'>

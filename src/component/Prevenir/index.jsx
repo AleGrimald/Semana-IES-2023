@@ -118,10 +118,10 @@ const Prevenir=(props)=>{
             </div>
 
             {
-                legislacio?<Legislacion/>:<></>
+                legislacio?<Legislacion titulosDatos={props.titulosDatos}/>:<></>
             }
             {
-                proyecto?<Proyectos/>:<></>
+                proyecto?<Proyectos titulosDatos={props.titulosDatos}/>:<></>
             }
         </div>
     </section>
