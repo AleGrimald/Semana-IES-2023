@@ -88,109 +88,40 @@ function App() {
     threshold: thresholdValor,
   });
 
-  //Datos del componenete Tarjeta (tajetas informativas de los virus)
-  const tarjetas=[
-    {
-      titulo:"Ransomware",
-      texto:"Es un tipo específico de malware que se encarga de evitar que el usuario tenga acceso a su propia información a través de la encriptación de dichos archivos. Cuando esto ocurre, el usuario necesita una contraseña para acceder a dichos archivos encriptados, la cual solo es conocida por el atacante. Para acceder a la contraseña y liberar la información, el usuario deberá pagar altas sumas de dinero al creador del malware, usualmente en bitcoins o cualquier otro tipo de criptomonedas.",
-      clase:"ran",
-      img:"./ransonware.png",
-      tarjeta:"tarjeta_ran",
-      animacion:"tarjeta_derecha .5s ease-out",
-      intersector:intersectado,
-      referencia: elementoRef,
-      fondo:"#ff646488",
-      sombra:"2px 2px 10px 5px #a13f3fd5",
-      color:"white"
-    },
-    {
-      titulo:"Spyware",
-      texto:"En este caso, el atacante o hacker utiliza este tipo de malware para monitorear la actividad de los usuarios en internet. A través de un spyware es posible recolectar información sensible como por ejemplo: usuarios, contraseñas y números de tarjetas de crédito para cometer el delito de robo de identidad y utilizar el dinero ajeno.",
-      clase:"spy",
-      img:"./spyware.jpg",
-      tarjeta:"tarjeta_spy",
-      animacion:"tarjeta_izquierda .5s ease-out",
-      intersector:intersectado2,
-      referencia: elementoRef2,
-      fondo:"#5ecdd1b4",
-      sombra:"-2px 2px 10px 5px #57afb3",
-      color:"white"
-    },
-    {
-      titulo:"Gusanos",
-      texto:"Los gusanos informáticos tienen el objetivo de replicarse. Es decir, al infectar un dispositivo buscan pasar al siguiente, ya sea para dañar los sistemas informáticos o para robar información de los usuarios. En este sentido, cuando hablamos de las empresas, los gusanos representan una grave problemática para la seguridad informática, ya que tienen facilidad para propagarse en varios dispositivos rápidamente.",
-      clase:"gus",
-      img:"./gusano.jpg",
-      tarjeta:"tarjeta_gus",
-      animacion:"tarjeta_derecha .5s ease-out",
-      intersector:intersectado3,
-      referencia: elementoRef3,
-      fondo:"#58e464b4",
-      sombra:"2px 2px 10px 5px #32a53cce",
-      color:"white"
-    },
-    {
-      titulo:"Troyanos",
-      texto:"Este software malicioso le debe su nombre al famoso relato del caballo de Troya, ya que se trata de un virus que se esconde en un software que aparenta ser confiable. Luego de ser instalado, comienza a actuar, generando daños graves en el sistema infectado.",
-      clase:"tro",
-      img:"./troyano.png",
-      tarjeta:"tarjeta_tro",
-      animacion:"tarjeta_izquierda .5s ease-out",
-      intersector:intersectado4,
-      referencia: elementoRef4,
-      fondo:"#ff00e4da",
-      sombra:"-2px 2px 10px 5px #ff00a0da",
-      color:"white"
-    },
-    {
-      titulo:"Adware",
-      texto:"Como su nombre lo indica, los adware tienen la tarea de bombardear nuestro dispositivo con anuncios publicitarios no deseados. La finalidad de este malware es generarle dinero al hacker mostrando miles de anuncios y además monitorea nuestra actividad en la web para personalizar estos anuncios o ventanas emergentes que se muestran en el dispositivo de forma masiva.",
-      clase:"adw",
-      img:"./adware.jpg",
-      tarjeta:"tarjeta_adw",
-      animacion:"tarjeta_derecha .5s ease-out",
-      intersector:intersectado5,
-      referencia: elementoRef5,
-      fondo:"#453ea593",
-      sombra:"2px 2px 10px 5px #554974c5",
-      color:"white"
-    },
-    {
-      titulo:"Botnets",
-      texto:"También llamados redes de robots, equipos o de códigos, los botnets son aquellos que se encargan de ejecutar un malware de forma simultánea utilizando varias computadoras. Es decir, los ciberatacantes buscan la forma de infectar miles de dispositivos para formar una especie de ejército que posteriormente serán utilizados para coordinar ataques de denegación de servicios (DDoS), correos spam, o robar datos personales masivamente.",
-      clase:"bot",
-      img:"./botnet.png",
-      tarjeta:"tarjeta_bot",
-      animacion:"tarjeta_izquierda .5s ease-out",
-      intersector:intersectado6,
-      referencia: elementoRef6,
-      fondo:"#a57c3eb7",
-      sombra:"-2px 2px 10px 5px #6e532bb7",
-      color:"white"
-    },
-    {
-      titulo:"Rootkits",
-      texto:"Por último, los Rootkits son utilizados para suplantar los permisos y controles de administrador con la finalidad de tomar el control de un sistema operativo por completo sin levantar ningún tipo de alerta del antivirus o software antimalware.",
-      clase:"roo",
-      img:"./rootkit.webp",
-      tarjeta:"tarjeta_roo",
-      animacion:"tarjeta_derecha .5s ease-out",
-      intersector:intersectado7,
-      referencia: elementoRef7,
-      fondo:"#b991c2b7",
-      sombra:"2px 2px 10px 5px #765b7ccb",
-      color:"white"
-    },
-  ];
-  //Datos de los encabezados de los componenetes
-  const titulosDatos={
-    datHeader:[
+  //Datos del Header
+  const header={
+    datosTexto:[
       {
         h1:"¿Que es Delito Informatico?",
         p:"Son conductas ilegales realizadas por ciberdelincuentes en el ciberespacio a través de dispositivos electrónicos y redes informáticas. Consiste en estafas, robos de datos personales, de información comercial estratégica, suplantación de identidad, fraudes informáticos, ataques como cyberbulling, grooming, phishing cometidos por ciberdelincuentes que actúan en grupos o trabajan solos.",
       }
     ],
-    datTarjeta:[
+    datosBotones:[
+      {
+        titulo:"Malware" ,
+        click: controlMaleware,
+        clase:"menu_items"
+      },
+      {
+        titulo:"Noticias" ,
+        click: controlNoticias,
+        clase:"menu_items"
+      },
+      {
+        titulo:"Denunciar" ,
+        click: controlDenunciar,
+        clase:"menu_items"
+      },
+      {
+        titulo:"Prevenir" ,
+        click: controlPrevenir,
+        clase:"menu_items"
+      }
+    ]
+  }
+  //Datos del componenete Tarjeta
+  const malware={
+    datoTexto:[
       {
         h2:"¿Qué es un Malware?",
         p:"El término malware, software malicioso o virus informático hace referencia a un programa diseñado para infiltrarse en el sistema operativo de un dispositivo (tales como smartphones android y apple, computadoras, tablets) y alterar su funcionamiento. Este tipo de programas maliciosos son utilizados por ciberdelincuentes para robar información personal, contraseñas, archivos del disco duro, números de tarjetas de crédito y más. En la actualidad, el malware constituye uno de los ataques cibernéticos más frecuentes y, por tanto, representa un gran riesgo para la ciberseguridad de los usuarios.",
@@ -202,16 +133,109 @@ function App() {
         animacion2:"whatsapp 2.2s ease-in infinite",
       }
     ],
-    datDenunciar:[
+    datosTarjetas:[
       {
-        h2:"Si fuiste víctima de un ciberdelito, denuncialo",
-        p:"Tenés diferentes alternativas en todo el país. Comunícate con alguno de los siguientes organismos para solicitar asesoramiento de equipos especializados o presentar una denuncia.",
-        p2:"Recorda que tambien podes utilizar las",
-        p3:" Lineas: (102 y 137)",
-        p4:" para denunciar ciberdelitos y grooming",
+        titulo:"Ransomware",
+        texto:"Es un tipo específico de malware que se encarga de evitar que el usuario tenga acceso a su propia información a través de la encriptación de dichos archivos. Cuando esto ocurre, el usuario necesita una contraseña para acceder a dichos archivos encriptados, la cual solo es conocida por el atacante. Para acceder a la contraseña y liberar la información, el usuario deberá pagar altas sumas de dinero al creador del malware, usualmente en bitcoins o cualquier otro tipo de criptomonedas.",
+        clase:"ran",
+        img:"./ransonware.png",
+        tarjeta:"tarjeta_ran",
+        animacion:"tarjeta_derecha .5s ease-out",
+        intersector:intersectado,
+        referencia: elementoRef,
+        fondo:"#ff646488",
+        sombra:"2px 2px 10px 5px #a13f3fd5",
+        color:"white"
+      },
+      {
+        titulo:"Spyware",
+        texto:"En este caso, el atacante o hacker utiliza este tipo de malware para monitorear la actividad de los usuarios en internet. A través de un spyware es posible recolectar información sensible como por ejemplo: usuarios, contraseñas y números de tarjetas de crédito para cometer el delito de robo de identidad y utilizar el dinero ajeno.",
+        clase:"spy",
+        img:"./spyware.jpg",
+        tarjeta:"tarjeta_spy",
+        animacion:"tarjeta_izquierda .5s ease-out",
+        intersector:intersectado2,
+        referencia: elementoRef2,
+        fondo:"#5ecdd1b4",
+        sombra:"-2px 2px 10px 5px #57afb3",
+        color:"white"
+      },
+      {
+        titulo:"Gusanos",
+        texto:"Los gusanos informáticos tienen el objetivo de replicarse. Es decir, al infectar un dispositivo buscan pasar al siguiente, ya sea para dañar los sistemas informáticos o para robar información de los usuarios. En este sentido, cuando hablamos de las empresas, los gusanos representan una grave problemática para la seguridad informática, ya que tienen facilidad para propagarse en varios dispositivos rápidamente.",
+        clase:"gus",
+        img:"./gusano.jpg",
+        tarjeta:"tarjeta_gus",
+        animacion:"tarjeta_derecha .5s ease-out",
+        intersector:intersectado3,
+        referencia: elementoRef3,
+        fondo:"#58e464b4",
+        sombra:"2px 2px 10px 5px #32a53cce",
+        color:"white"
+      },
+      {
+        titulo:"Troyanos",
+        texto:"Este software malicioso le debe su nombre al famoso relato del caballo de Troya, ya que se trata de un virus que se esconde en un software que aparenta ser confiable. Luego de ser instalado, comienza a actuar, generando daños graves en el sistema infectado.",
+        clase:"tro",
+        img:"./troyano.png",
+        tarjeta:"tarjeta_tro",
+        animacion:"tarjeta_izquierda .5s ease-out",
+        intersector:intersectado4,
+        referencia: elementoRef4,
+        fondo:"#ff00e4da",
+        sombra:"-2px 2px 10px 5px #ff00a0da",
+        color:"white"
+      },
+      {
+        titulo:"Adware",
+        texto:"Como su nombre lo indica, los adware tienen la tarea de bombardear nuestro dispositivo con anuncios publicitarios no deseados. La finalidad de este malware es generarle dinero al hacker mostrando miles de anuncios y además monitorea nuestra actividad en la web para personalizar estos anuncios o ventanas emergentes que se muestran en el dispositivo de forma masiva.",
+        clase:"adw",
+        img:"./adware.jpg",
+        tarjeta:"tarjeta_adw",
+        animacion:"tarjeta_derecha .5s ease-out",
+        intersector:intersectado5,
+        referencia: elementoRef5,
+        fondo:"#453ea593",
+        sombra:"2px 2px 10px 5px #554974c5",
+        color:"white"
+      },
+      {
+        titulo:"Botnets",
+        texto:"También llamados redes de robots, equipos o de códigos, los botnets son aquellos que se encargan de ejecutar un malware de forma simultánea utilizando varias computadoras. Es decir, los ciberatacantes buscan la forma de infectar miles de dispositivos para formar una especie de ejército que posteriormente serán utilizados para coordinar ataques de denegación de servicios (DDoS), correos spam, o robar datos personales masivamente.",
+        clase:"bot",
+        img:"./botnet.png",
+        tarjeta:"tarjeta_bot",
+        animacion:"tarjeta_izquierda .5s ease-out",
+        intersector:intersectado6,
+        referencia: elementoRef6,
+        fondo:"#a57c3eb7",
+        sombra:"-2px 2px 10px 5px #6e532bb7",
+        color:"white"
+      },
+      {
+        titulo:"Rootkits",
+        texto:"Por último, los Rootkits son utilizados para suplantar los permisos y controles de administrador con la finalidad de tomar el control de un sistema operativo por completo sin levantar ningún tipo de alerta del antivirus o software antimalware.",
+        clase:"roo",
+        img:"./rootkit.webp",
+        tarjeta:"tarjeta_roo",
+        animacion:"tarjeta_derecha .5s ease-out",
+        intersector:intersectado7,
+        referencia: elementoRef7,
+        fondo:"#b991c2b7",
+        sombra:"2px 2px 10px 5px #765b7ccb",
+        color:"white"
       }
     ],
-    datPrevenir:{
+  };
+  //Datos del componente Prevenir
+  const prevenir={
+    datosRedes:[{
+      elementWpFb:elementWpFb,
+      intersectadoWpFb:intersectadoWpFb,
+      animacion:"facebook 2.2s ease-in infinite",
+      animacion2:"whatsapp 2.2s ease-in infinite",
+    }],
+    datosTexto:{
       h2:"Recomendaciones para evitar estafas en internet",
       p:"Si tenés dudas sobre dónde denunciar, recordá que siempre lo podes hacer en comisarías, fiscalías o a través de la línea 137.",
       video:{
@@ -233,32 +257,67 @@ function App() {
         "Si tenés que cambiar la contraseña, asegurarse de hacerlo siempre desde el sitio oficial del banco o de la aplicación",
         " Si te contactan desde un organismo público o privado vía WhatsApp, verificá el logo de autenticación del organismo público que se está contactando."
       ]
+    },
+    datosTexto2:{
+      p1:"Los dispositivos, las plataformas y entornos digitales se convirtieron en espacios esenciales en la socialización de niñas, niñes, niños y adolescentes. Son espacios para el ejercicio de sus derechos, como jugar, comunicarse, educarse, informarse y participar, entre otros. Pero allí también pueden encontrarse con algunos riesgos y situaciones que afecten su integridad.",
+      p2:{
+          p1:"Es toda acción por la que una persona adulta contacta a una niña, un niño o adolescente a través de comunicaciones electrónicas, telecomunicaciones o cualquier otra tecnología de transmisión de datos para atentar contra su integridad sexual ",
+          a:"https://www.argentina.gob.ar/normativa/nacional/ley-27590-345231/texto",
+          p2:" Ley N°27590"
+        },
+      p3:{
+        p1:"Muchas veces se realiza usando una ",
+        b1:"identidad falsa",
+        p2:" y creando un ",
+        b2:"vínculo de confianza",
+        p3:", que puede ser difícil de reconocer como violencia en un primer momento. También puede ser alguien conocido del círculo íntimo, o un desconocido que no oculte su identidad."
+
+      },
+      p4:{
+        p1:"Es importante saber que, aunque la violencia ocurra en forma virtual,",
+        b1:"el daño que produce es real y es necesario intervenir",
+        p2:" para restituir los derechos vulnerados."
+      },
+      p5:{
+        p1:"Desde diciembre de 2013 el Código Penal establece que ",
+        b1:{
+          p1:"el grooming ",
+          a:"https://www.argentina.gob.ar/normativa/nacional/ley-26904-223586",
+          p2:" es un delito ",
+        },
+        p2:" que puede tener una pena de prisión de 6 meses a 4 años. Además, puede ser la antesala a otros delitos, por ejemplo:"
+      },
+      p6:"Obtener material de abuso sexual contra las infancias, ya sea para archivar o para difundir o comercializar en redes de explotación sexual contra las infancias y adolescencias.",
+      p7:"Generar encuentros personales con sus víctimas con intenciones de cometer un abuso sexual físico.",
+      titulo:"Grooming y Acoso Virtual"
+    },
+    datosTexto3:{
+      parrafo1:{
+        p1:"Para prevenir y luchar contra este delito penal, a través de la ley N°27.590 “Mica Ortega“ se creó ",
+        b1:"Clic Derechos - Programa Nacional de Prevención y Concientización del Grooming o ciberacoso contra niñas, niños y adolescentes.",
+      },
+      parrafo2:{
+        p1:"La ",
+        b1:"Secretaría Nacional de Niñez, Adolescencia y Familia",
+        p2:" (SENAF), como el órgano de aplicación de esta ley, genera estrategias para acompañar a las infancias y adolescencias en el uso de las pantallas, prevenir las violencias digitales y construir junto a toda la comunidad entornos seguros para el desarrollo de su ciudadanía digital.",
+      }
     }
-      
+
   }
-  //Botones de los componentes Header y Nav
-  const btn=[
-    {
-      titulo:"Malware" ,
-      click: controlMaleware,
-      clase:"menu_items"
-    },
-    {
-      titulo:"Noticias" ,
-      click: controlNoticias,
-      clase:"menu_items"
-    },
-    {
-      titulo:"Denunciar" ,
-      click: controlDenunciar,
-      clase:"menu_items"
-    },
-    {
-      titulo:"Prevenir" ,
-      click: controlPrevenir,
-      clase:"menu_items"
-    }
-  ];
+  
+
+
+  const titulosDatos={ 
+    datDenunciar:[
+      {
+        h2:"Si fuiste víctima de un ciberdelito, denuncialo",
+        p:"Tenés diferentes alternativas en todo el país. Comunícate con alguno de los siguientes organismos para solicitar asesoramiento de equipos especializados o presentar una denuncia.",
+        p2:"Recorda que tambien podes utilizar las",
+        p3:" Lineas: (102 y 137)",
+        p4:" para denunciar ciberdelitos y grooming",
+      }
+    ],      
+  }
   //Datos de los componenetes Denunciar, BtnCoord,Map y las Tarjetas con info direcciones
   const datosBtnDenunciar=[
     {
@@ -320,6 +379,10 @@ function App() {
       }]
     }
   ];
+
+
+
+  
   //Datos del componente Footer
   const datosFooter=[
     {
@@ -392,15 +455,14 @@ function App() {
 
       {
         (btnMaleware||btnDenunciar||btnPrevenir||btnNoticias)===false
-        ?<Header contenido={titulosDatos} btn={btn}/>
-        :<Nav btn={btn}/>
+        ?<Header datosHeader={header}/>
+        :<Nav datosHeader={header}/>
       }
       
       {
         btnMaleware
-          ?<Tarjetas 
-            titulosDatos={titulosDatos} 
-            tarjetas={tarjetas}/>
+          ?<Tarjetas  
+            datosMalware={malware}/>
           :<></>
       }
       {
@@ -423,7 +485,7 @@ function App() {
       {
         btnPrevenir
           ?<Prevenir
-              titulosDatos={titulosDatos}
+            datosPrevenir={prevenir}
             />
           :<></>
       }

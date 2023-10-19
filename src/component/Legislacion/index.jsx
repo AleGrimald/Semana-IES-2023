@@ -3,7 +3,7 @@ import Redes from '../Redes';
 import Leyes from '../Leyes';
 
 const Legislacion=(props)=>{
-    const {datTarjeta}=props.titulosDatos;
+    const {datosRedes}=props;
     const leyes=[
         {
             h4:"Ley 27.590 Mica Ortega - Prevención y Concientización del grooming",
@@ -54,8 +54,9 @@ const Legislacion=(props)=>{
     return <section className='legislacion'>
         <div className='legislacion_contenedor_titulo'>
             <h2 className='legislacion_h2'>Legislacion</h2>
+            
             {
-                datTarjeta.map(dato=>
+                datosRedes.map(dato=>
                     <Redes
                     clase='redes estafa_redes'
                     elementWpFb={dato.elementWpFb} 
@@ -72,20 +73,23 @@ const Legislacion=(props)=>{
                 Accedé a todas las leyes y normativas vigentes relacionadas con el grooming y otras violencias digitales.
             </p>
         </div>
-        {
-            leyes.map((ley, key)=>
-                <Leyes 
-                    titulo={ley.h4} 
-                    parrafo={ley.p} 
-                    link1={ley.link1} 
-                    link2={ley.link2}
-                    a1={ley.a1}
-                    a2={ley.a2}
-                    a2style={ley.a2style}
-                    key={key}
-                />
-            )
-        }
+        <div className='contenedor_leyes'>
+            {
+                leyes.map((ley, key)=>
+                    <Leyes 
+                        titulo={ley.h4} 
+                        parrafo={ley.p} 
+                        link1={ley.link1} 
+                        link2={ley.link2}
+                        a1={ley.a1}
+                        a2={ley.a2}
+                        a2style={ley.a2style}
+                        key={key}
+                    />
+                )
+            }
+        </div>
+        
     </section>
 }
 export default Legislacion;

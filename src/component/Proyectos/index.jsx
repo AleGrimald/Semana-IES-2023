@@ -2,18 +2,19 @@ import './Proyectos.css'
 import Redes from '../Redes'
 
 const Proyectos=(props)=>{
-    const {datTarjeta}=props.titulosDatos;
+    const {datosRedes}=props;
+
     return <section className='proyecto'>
         <div className='proyecto_contenedor_titulo'>
             <h2 className='proyecto_h2'>Proyectos</h2>
             {
-                datTarjeta.map(dato=>
+                datosRedes.map(dato=>
                     <Redes
-                    clase='redes estafa_redes'
-                    elementWpFb={dato.elementWpFb} 
-                    intersectadoWpFb={dato.intersectadoWpFb}
-                    animacion={dato.animacion}
-                    animacion2={dato.animacion2} 
+                        clase='redes estafa_redes'
+                        elementWpFb={dato.elementWpFb} 
+                        intersectadoWpFb={dato.intersectadoWpFb}
+                        animacion={dato.animacion}
+                        animacion2={dato.animacion2} 
                     />
                 )
             }

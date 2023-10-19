@@ -1,4 +1,5 @@
 import './Noticia.css';
+import Iframe from '../Iframe';
 
 const Noticia=(props)=>{
     const {titulo, texto, video, img, link, clase ,key}=props;
@@ -22,21 +23,11 @@ const Noticia=(props)=>{
                     <h2 className='noticia_h2'>{titulo}</h2>
                     <p className='noticia_p'>{texto}</p>
                 </div>
-                <iframe
-                    className='noticia_video' 
-                    src={video} 
-                    title="YouTube video player" 
-                    allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write; 
-                    encrypted-media; 
-                    gyroscope; 
-                    picture-in-picture; 
-                    web-share
-                    " 
-                    allowFullScreen
-                > </iframe>
+                <Iframe
+                    clase='noticia_video'
+                    link={video} 
+                />
+                
             </div>:<></>
         }
     </section>

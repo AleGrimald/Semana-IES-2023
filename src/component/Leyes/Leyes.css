@@ -4,11 +4,9 @@
     flex-flow: column nowrap;
     justify-content: top;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding: .7rem 1rem;
+    padding: 2rem 1.5rem;
+    border-bottom: 2px solid white;
     border-radius: 20px;
-    background-color: rgba(6, 3, 63, 0.55);
-    box-shadow: 5px 5px 10px 5px rgba(6, 3, 63, 0.791);
 }
 .leyes_contenedor_titulo{
     width: 100%;

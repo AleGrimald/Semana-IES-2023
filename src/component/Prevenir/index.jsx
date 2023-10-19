@@ -1,17 +1,22 @@
+import './Prevenir.css';
 import Redes from '../Redes';
-import Botones from '../Botones'
+import Botones from '../Botones';
 import Legislacion from '../Legislacion';
 import Proyectos from '../Proyectos';
 import Li from '../Li';
-import './Prevenir.css'
+import Iframe from '../Iframe';
+
 import { useState } from 'react';
 
 const Prevenir=(props)=>{
-    const {datTarjeta}=props.titulosDatos;
-    const {h2, p, parrafo, video}=props.titulosDatos.datPrevenir;
     const[legislacio, setLegislacion]=useState(false);
     const[proyecto, setProyecto]=useState(false);
 
+    const {datosRedes,datosTexto,datosTexto2,datosTexto3}= props.datosPrevenir;
+    const {h2,p,video,parrafo}=datosTexto;
+    const {p1,p2,p3,p4,p5,p6,p7,titulo}=datosTexto2;
+    const {parrafo1, parrafo2}=datosTexto3;
+    
     const ejecutarLegislacion=(event)=>{
         event.preventDefault();
         setLegislacion(!legislacio);
@@ -28,13 +33,13 @@ const Prevenir=(props)=>{
             <div className='estafa_titulo'>
                 <h2 className='estafa_h2'>{h2}</h2>
                 {
-                    datTarjeta.map(dato=>
+                    datosRedes.map(dato=>
                         <Redes
-                        clase='redes estafa_redes'
-                        elementWpFb={dato.elementWpFb} 
-                        intersectadoWpFb={dato.intersectadoWpFb}
-                        animacion={dato.animacion}
-                        animacion2={dato.animacion2} 
+                            clase='redes estafa_redes'
+                            elementWpFb={dato.elementWpFb} 
+                            intersectadoWpFb={dato.intersectadoWpFb}
+                            animacion={dato.animacion}
+                            animacion2={dato.animacion2} 
                         />
                     )
                 }
@@ -47,58 +52,44 @@ const Prevenir=(props)=>{
                 <p className='p1'>{p}</p> 
             </ul>
 
-            
             <div className='contenedor_video'>
                 <h2 className='estafa_h2'>{video.h2}</h2>
                 <div className='estafa_p_video'> 
                     <p className='p_video'>{video.p}</p>
                 </div>
-                <iframe
-                    className='grooming_video'
-                    src={video.link} 
-                    title="YouTube video player" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen
+                <Iframe
+                    estilo={{width:"100%", height:"30rem", padding:".1rem"}}
+                    clase='grooming_video'
+                    link={video.link} 
                 />
             </div>
         </div> 
             
         <div className='contenedor_grooming'>
-            <h2 className='grooming_h2'>Grooming y Acoso Virtual</h2>
+            <h2 className='grooming_h2'>{titulo}</h2>
             <div className='grooming_texto1'>
-                <p className='grooming_p1'>
-                    Los dispositivos, las plataformas y entornos digitales se convirtieron en espacios esenciales en la socialización de niñas, niñes, niños y adolescentes. Son espacios para el ejercicio de sus derechos, como jugar, comunicarse, educarse, informarse y participar, entre otros. Pero allí también pueden encontrarse con algunos riesgos y situaciones que afecten su integridad.
-                </p>
-                <p className='grooming_p1'>
-                    Es toda acción por la que una persona adulta contacta a una niña, un niño o adolescente a través de comunicaciones electrónicas, telecomunicaciones o cualquier otra tecnología de transmisión de datos para atentar contra su integridad sexual (<a href='https://www.argentina.gob.ar/normativa/nacional/ley-27590-345231/texto'>Ley N°27590</a>).
-                </p>
-                <p className='grooming_p1'>
-                    Muchas veces se realiza usando una <b>identidad falsa</b> y creando un <b>vínculo de confianza</b>, que puede ser difícil de reconocer como violencia en un primer momento. También puede ser alguien conocido del círculo íntimo, o un desconocido que no oculte su identidad.
-                </p>
-                <p className='grooming_p1'>
-                    Es importante saber que, aunque la violencia ocurra en forma virtual,<b>el daño que produce es real y es necesario intervenir</b> para restituir los derechos vulnerados.
-                </p>
-                <p className='grooming_p1'>
-                    Desde diciembre de 2013 el Código Penal establece que <b>el grooming <a href='https://www.argentina.gob.ar/normativa/nacional/ley-26904-223586'>es un delito</a></b> que puede tener una pena de prisión de 6 meses a 4 años. Además, puede ser la antesala a otros delitos, por ejemplo:
-                </p>
+                <p className='grooming_p1'>{p1}</p>
+                <p className='grooming_p1'>{p2.p1}<a href={p2.a}>{p2.p2}</a></p>
+                <p className='grooming_p1'>{p3.p1}<b>{p3.b1}</b>{p3.p2}<b>{p3.b2}</b>{p3.p3}</p>
+                <p className='grooming_p1'>{p4.p1}<b>{p4.b1}</b>{p4.p2}</p>
+                <p className='grooming_p1'>{p5.p1} <b>{p5.b1.p1} <a href={p5.b1.a}>{p5.b1.p2}</a></b>{p5.p2}</p>
                 <ul className='grooming_ul'>
-                    <Li texto={"Obtener material de abuso sexual contra las infancias, ya sea para archivar o para difundir o comercializar en redes de explotación sexual contra las infancias y adolescencias."} clase={"li"}/>
-                    <Li texto={"Generar encuentros personales con sus víctimas con intenciones de cometer un abuso sexual físico."} clase={"li"}/>
+                    <Li texto={p6} clase={"li"}/>
+                    <Li texto={p7} clase={"li"}/>
                 </ul>
             </div>
-            <iframe
-            className='grooming_video'
-            src="https://www.youtube.com/embed/O1bbS25JngQ?si=AQsUIGPHgScO9eVS" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-            ></iframe>
+            <Iframe
+                estilo={{width:"100%", height:"30rem", padding:".1rem"}}
+                clase='grooming_video'
+                link="https://www.youtube.com/embed/O1bbS25JngQ?si=AQsUIGPHgScO9eVS"
+            />
+            
             <div className='grooming_texto1'>
                 <p className='grooming_p1'>
-                    Para prevenir y luchar contra este delito penal, a través de la ley N°27.590 “Mica Ortega" se creó <b>Clic Derechos - Programa Nacional de Prevención y Concientización del Grooming o ciberacoso contra niñas, niños y adolescentes.</b>
+                    {parrafo1.p1}<b>{parrafo1.b1}</b>
                 </p>
                 <p className='grooming_p1'>
-                    La <b>Secretaría Nacional de Niñez, Adolescencia y Familia</b> (SENAF), como el órgano de aplicación de esta ley, genera estrategias para acompañar a las infancias y adolescencias en el uso de las pantallas, prevenir las violencias digitales y construir junto a toda la comunidad entornos seguros para el desarrollo de su ciudadanía digital.
+                    {parrafo2.p1}<b>{parrafo2.b1}</b>{parrafo2.p2}
                 </p>
             </div>
 
@@ -118,10 +109,10 @@ const Prevenir=(props)=>{
             </div>
 
             {
-                legislacio?<Legislacion titulosDatos={props.titulosDatos}/>:<></>
+                legislacio?<Legislacion datosRedes={datosRedes}/>:<></>
             }
             {
-                proyecto?<Proyectos titulosDatos={props.titulosDatos}/>:<></>
+                proyecto?<Proyectos datosRedes={datosRedes}/>:<></>
             }
         </div>
     </section>

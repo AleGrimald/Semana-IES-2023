@@ -1,13 +1,15 @@
+import './Tarjetas.css';
 import Redes from '../Redes';
-import './Tarjetas.css'
+import Iframe from '../Iframe'
+
 
 const Tarjetas = (props)=>{
-    const {tarjetas}=props;
-    const {datTarjeta}=props.titulosDatos;
+    
+    const {datoTexto,datosTarjetas}= props.datosMalware
     
     return <section className='contenedor_tarjeta' id='malware'>
         {
-            datTarjeta.map(dato=>
+            datoTexto.map(dato=>
                 <>
                     <section className='contenedor'>
                         <div className="contenedor_titulo">
@@ -15,24 +17,13 @@ const Tarjetas = (props)=>{
                             <p className="titulo_p">{dato.p}</p>
                         </div>
                         <div className='contenedor_redesiframe'>
-                            <iframe 
-                                width="540" 
-                                height="300" 
-                                src="https://www.youtube.com/embed/HuasitV4lcw?si=zSltfG3YkPRTR5gS" 
-                                title="YouTube video player" 
-                                
-                                allow="
-                                    accelerometer;
-                                    autoplay; 
-                                    clipboard-write; 
-                                    encrypted-media; 
-                                    gyroscope; 
-                                    picture-in-picture; 
-                                    web-share
-                                " 
-                                allowFullScreen
-                            >
-                            </iframe>
+                            <Iframe
+                                ancho="540"
+                                alto="300"
+                                link="https://www.youtube.com/embed/HuasitV4lcw?si=zSltfG3YkPRTR5gS"
+                                clase="iframe"
+                            />
+                
                             <Redes
                              elementWpFb={dato.elementWpFb} 
                              intersectadoWpFb={dato.intersectadoWpFb}
@@ -52,7 +43,7 @@ const Tarjetas = (props)=>{
         }
         
         {
-            tarjetas.map((tarjeta, key)=>
+            datosTarjetas.map((tarjeta, key)=>
                 <section className={tarjeta.tarjeta} key={key}>
                     <div 
                         className={tarjeta.clase} 
