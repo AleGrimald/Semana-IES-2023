@@ -302,7 +302,6 @@ function App() {
         p2:" (SENAF), como el órgano de aplicación de esta ley, genera estrategias para acompañar a las infancias y adolescencias en el uso de las pantallas, prevenir las violencias digitales y construir junto a toda la comunidad entornos seguros para el desarrollo de su ciudadanía digital.",
       }
     }
-
   }
   
 
@@ -379,9 +378,6 @@ function App() {
       }]
     }
   ];
-
-
-
   
   //Datos del componente Footer
   const datosFooter=[
@@ -493,8 +489,8 @@ function App() {
       {
         (btnDenunciar||btnMaleware||btnPrevenir||btnNoticias)
           ?<Footer
-           datosFooter={datosFooter}
-          />
+            datosFooter={datosFooter}
+            />
           :<></>
       }
       

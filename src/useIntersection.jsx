@@ -25,7 +25,6 @@ function useIntersection(opciones ={}){
     },[opciones]);
 
     return[elementoRef, intersectado]
-
 }
 
 export default useIntersection;
