@@ -396,6 +396,41 @@ function App() {
       clase:"noticia"
     },
     {
+      h2:"Infobae",
+      p:"Conoce los tipos de estafas y robos vía llamadas a tu celular y cómo evitarlos",
+      img:"./Infobae3.png",
+      link:"https://www.infobae.com/tecno/2024/04/04/conoce-los-tipos-de-estafas-y-robos-via-llamadas-a-tu-celular-y-como-evitarlos/?form=MG0AV3",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Economicas Bariloche",
+      p:"Alertan por estafas telefónicas en las que utilizan el nombre de “Defensa al Consumidor”",
+      img:"./EcoBariloche.png",
+      link:"https://www.economicasbariloche.com.ar/noticias/2024/10/09/15825-alertan-por-estafas-telefonicas-en-las-que-utilizan-el-nombre-de-defensa-al-consumidor?form=MG0AV3",
+      clase:"seccion_img"
+    },
+    {
+      h2:"El Cordillerano",
+      p:"Advierten por nuevas estafas en Gmail: cuáles son y cómo prevenirlas",
+      img:"./ElCordillerano.png",
+      link:"https://www.elcordillerano.com.ar/noticias/2024/10/15/199594-advierten-por-nuevas-estafas-en-gmail-cuales-son-y-como-prevenirlas?form=MG0AV3",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Todo Noticias",
+      p:"Los ataques de ciberseguridad no paran de crecer en Argentina: estas son las amenazas más frecuentes",
+      img:"./Tn3.png",
+      link:"https://tn.com.ar/tecno/novedades/2023/12/26/los-ataques-de-ciberseguridad-no-paran-de-crecer-en-argentina-estas-son-las-amenazas-mas-frecuentes/?form=MG0AV3",
+      clase:"seccion_img"
+    },
+    {
+      h2:"Infobae",
+      p:"Alerta en América Latina: Más de mil ataques de phishing por minuto a PC y celulares",
+      img:"./Infobae2.png",
+      link:"https://www.infobae.com/tecno/2024/10/18/alerta-en-america-latina-mas-de-mil-ataques-de-phishing-por-minuto-a-pc-y-celulares/?form=MG0AV3",
+      clase:"seccion_img"
+    },
+    {
       h2:"El Cronista",
       p:"Alerta de Hackeos",
       img:"./ElCronista.png",

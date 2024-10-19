@@ -2,7 +2,8 @@ import './Iframe.css';
 
 const Iframe=(props)=>{
     const {ancho, alto, link, clase, estilo}= props;
-    return <iframe 
+    return <iframe
+        title='Hola'
         src={link}
         width={ancho}
         height={alto}
