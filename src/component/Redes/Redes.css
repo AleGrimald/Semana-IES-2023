@@ -42,7 +42,7 @@
     height: 3.2rem;
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     gap: 1.5rem;
 }
 .redes_footer>div>a>img{
