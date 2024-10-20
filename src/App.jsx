@@ -2,20 +2,17 @@ import './App.css';
 //Hooks
 import { useState } from 'react';
 import useIntersection from './useIntersection';
+import {Routes, Route} from 'react-router-dom';
 //Componentes
 import Header from './component/Header';
-import Nav from './component/Nav';
 import Tarjetas from './component/Tarjetas';
 import Denunciar from './component/Denunciar';
 import Prevenir from './component/Prevenir';
 import Footer from './component/Footer';
 import Noticias from './component/Noticias';
+import BarraNav from './component/BarraNav';
 
 function App() {
-  const [btnMaleware, setBtnMaleware]= useState(false);
-  const [btnDenunciar, setBtnDenunciar]= useState(false);
-  const [btnPrevenir, setBtnPrevenir]= useState(false);
-  const [btnNoticias, setBtnNoticias]=useState(false);
   const [datos, setDatos] = useState([]);
   const [coordenada, setCoordenada]= useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.2871895368685!2d-65.20518169636479!3d-26.830816455657708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c106f2afc99%3A0xe97bef14f2ad881a!2sPlaza%20Independencia!5e0!3m2!1ses-419!2sar!4v1694418283826!5m2!1ses-419!2sar");
   const [tarjeta, setTarjeta] = useState(false);
@@ -23,70 +20,22 @@ function App() {
   const [tarjeta3, setTarjeta3] = useState(false);
   const [tarjeta4, setTarjeta4] = useState(false);
   
-  
 //Funciones de los botones del Header y Nav
-  const controlMaleware=(event)=>{
-    event.preventDefault();
-    setBtnMaleware(!btnMaleware);
-    setBtnDenunciar(false);
-    setBtnPrevenir(false);
-    setBtnNoticias(false);
-    window.scrollTo({top:0, behavior: "smooth"})
-  }
-  const controlDenunciar=(event)=>{
-    event.preventDefault();
-    setBtnDenunciar(!btnDenunciar);
-    setBtnMaleware(false);
-    setBtnPrevenir(false);
-    setBtnNoticias(false);
-    window.scrollTo({top:0, behavior: "smooth"})
-  }
-  const controlNoticias=(event)=>{
-    event.preventDefault();
-    setBtnNoticias(!btnNoticias);
-    setBtnDenunciar(false);
-    setBtnMaleware(false);
-    setBtnPrevenir(false);
-    window.scrollTo({top:0, behavior: "smooth"})
-  }
-  const controlPrevenir=(event)=>{
-    event.preventDefault();
-    setBtnPrevenir(!btnPrevenir);
-    setBtnMaleware(false);
-    setBtnDenunciar(false);
-    setBtnNoticias(false);
+  const controlLinks=()=>{
     window.scrollTo({top:0, behavior: "smooth"})
   }
 
   //Observador para el efecto de las tarjetas
   const thresholdValor=0;
-  const [elementoRef, intersectado]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef2, intersectado2]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef3, intersectado3]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef4, intersectado4]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef5, intersectado5]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef6, intersectado6]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementoRef7, intersectado7]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementWpFb, intersectadoWpFb]= useIntersection({
-    threshold: thresholdValor,
-  });
-  const [elementWpFbFooter, intersectadoWpFbFooter]= useIntersection({
-    threshold: thresholdValor,
-  });
+  const [elementoRef, intersectado]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef2, intersectado2]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef3, intersectado3]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef4, intersectado4]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef5, intersectado5]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef6, intersectado6]= useIntersection({threshold: thresholdValor,});
+  const [elementoRef7, intersectado7]= useIntersection({threshold: thresholdValor,});
+  const [elementWpFb, intersectadoWpFb]= useIntersection({threshold: thresholdValor,});
+  const [elementWpFbFooter, intersectadoWpFbFooter]= useIntersection({threshold: thresholdValor,});
 
   //Datos del Header
   const header={
@@ -94,28 +43,6 @@ function App() {
       {
         h1:"¿Que es Delito Informatico?",
         p:"Son conductas ilegales realizadas por ciberdelincuentes en el ciberespacio a través de dispositivos electrónicos y redes informáticas. Consiste en estafas, robos de datos personales, de información comercial estratégica, suplantación de identidad, fraudes informáticos, ataques como cyberbulling, grooming, phishing cometidos por ciberdelincuentes que actúan en grupos o trabajan solos.",
-      }
-    ],
-    datosBotones:[
-      {
-        titulo:"Malware" ,
-        click: controlMaleware,
-        clase:"menu_items"
-      },
-      {
-        titulo:"Noticias" ,
-        click: controlNoticias,
-        clase:"menu_items"
-      },
-      {
-        titulo:"Denunciar" ,
-        click: controlDenunciar,
-        clase:"menu_items"
-      },
-      {
-        titulo:"Prevenir" ,
-        click: controlPrevenir,
-        clase:"menu_items"
       }
     ]
   }
@@ -304,8 +231,6 @@ function App() {
     }
   }
   
-
-
   const titulosDatos={ 
     datDenunciar:[
       {
@@ -481,54 +406,45 @@ function App() {
     },    
   ];
 
+  const linksBarraNav=[
+    {
+      texto: "Home",
+      link: "/",
+      controlLinks
+    },
+    {
+      texto: "Malware",
+      link: "/malware",
+      controlLinks
+    },
+    {
+      texto: "Prevenir",
+      link: "/prevenir",
+      controlLinks
+    },
+    {
+      texto: "Noticias",
+      link: "/noticias",
+      controlLinks
+    },
+    {
+      texto: "Denunciar",
+      link: "/denunciar",
+      controlLinks
+    }
+  ];
+
   return (
     <div className="App">
-
-      {
-        (btnMaleware||btnDenunciar||btnPrevenir||btnNoticias)===false
-        ?<Header datosHeader={header}/>
-        :<Nav datosHeader={header}/>
-      }
-      
-      {
-        btnMaleware
-          ?<Tarjetas  
-            datosMalware={malware}/>
-          :<></>
-      }
-      {
-        btnDenunciar
-          ?<Denunciar 
-              contenido={titulosDatos} 
-              btn={datosBtnDenunciar} 
-              datoCoordenada={coordenada} 
-              datosTarjeas={datos} 
-            />
-          :<></>
-      }
-      {
-        btnNoticias
-          ?<Noticias
-              datos={datosNoticia}
-            />
-          :<></>
-      }
-      {
-        btnPrevenir
-          ?<Prevenir
-            datosPrevenir={prevenir}
-            />
-          :<></>
-      }
-      
-      {
-        (btnDenunciar||btnMaleware||btnPrevenir||btnNoticias)
-          ?<Footer
-            datosFooter={datosFooter}
-            />
-          :<></>
-      }
-      
+      <BarraNav datos={linksBarraNav}/>
+      <Routes>
+        <Route path='/' element={<Header datosHeader={header}/>}/>
+        <Route path='/malware' element={<Tarjetas datosMalware={malware}/>}/>
+        <Route path='/denunciar' element={<Denunciar contenido={titulosDatos} btn={datosBtnDenunciar} datoCoordenada={coordenada} datosTarjeas={datos} />}/>
+        <Route path='/prevenir' element={<Prevenir datosPrevenir={prevenir} />}/>
+        <Route path='/noticias' element={<Noticias datos={datosNoticia}/>}/>
+      </Routes>
+      <Footer datosFooter={datosFooter}/>
     </div>
   );
 }

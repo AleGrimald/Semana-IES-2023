@@ -25,11 +25,11 @@ const Tarjetas = (props)=>{
                             />
                 
                             <Redes
-                             elementWpFb={dato.elementWpFb} 
-                             intersectadoWpFb={dato.intersectadoWpFb}
-                             animacion={dato.animacion}
-                             animacion2={dato.animacion2} 
-                             clase='redes'
+                                elementWpFb={dato.elementWpFb} 
+                                intersectadoWpFb={dato.intersectadoWpFb}
+                                animacion={dato.animacion}
+                                animacion2={dato.animacion2} 
+                                clase='redes'
                             />
                         </div>
                     </section>
